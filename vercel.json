@@ -19,7 +19,8 @@
     "env": {
         "APP_ENV": "production",
         "APP_DEBUG": "false",
-        "APP_URL": "https://your-domain.vercel.app",
+        "APP_KEY": "base64:ZGiyXVRwNq/0iO9DYufqJyyw7HE6CIHpv18APhFlVfc=",
+        "APP_URL": "https://maaztajammul.me",
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
         "APP_PACKAGES_CACHE": "/tmp/packages.php",
@@ -34,5 +35,10 @@
         "env": {
             "COMPOSER_MIRROR_PATH_REPOS": "1"
         }
-    }
+    },
+    "buildCommand": "composer install --optimize-autoloader --no-dev && npm install && npm run build:ssr",
+    "installCommand": "composer install --optimize-autoloader --no-dev && npm install",
+    "devCommand": "php artisan serve",
+    "outputDirectory": "public",
+    "ignoreCommand": "git diff --quiet HEAD^ HEAD ./"
 }
