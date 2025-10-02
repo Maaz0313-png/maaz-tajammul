@@ -3,7 +3,7 @@
     "framework": null,
     "functions": {
         "api/index.php": {
-            "runtime": "vercel-php@0.7.1"
+            "runtime": "vercel-php@0.8.3"
         }
     },
     "routes": [
@@ -36,8 +36,6 @@
             "COMPOSER_MIRROR_PATH_REPOS": "1"
         }
     },
-    "buildCommand": "composer install --optimize-autoloader --no-dev && npm install && npm run build:ssr",
-    "installCommand": "composer install --optimize-autoloader --no-dev && npm install",
-    "devCommand": "php artisan serve",
-    "outputDirectory": "public"
+    "buildCommand": "npm run build:ssr",
+    "devCommand": "php artisan serve"
 }
