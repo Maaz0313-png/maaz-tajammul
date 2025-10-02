@@ -39,6 +39,5 @@
     "buildCommand": "composer install --optimize-autoloader --no-dev && npm install && npm run build:ssr",
     "installCommand": "composer install --optimize-autoloader --no-dev && npm install",
     "devCommand": "php artisan serve",
-    "outputDirectory": "public",
-    "ignoreCommand": "git diff --quiet HEAD^ HEAD ./"
+    "outputDirectory": "public"
 }
