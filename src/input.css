@@ -33,13 +33,17 @@ body {
     radial-gradient(circle at 85% 0%, rgba(6, 182, 212, 0.2) 0%, transparent 35%), var(--bg);
   color: var(--text);
   min-height: 100vh;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
 }
 
 h1,
 h2,
 h3,
 .brand-mark {
-  font-family: "Syne", sans-serif;
+  font-family: "Syne", "Outfit", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   letter-spacing: -0.02em;
 }
 
@@ -515,8 +519,8 @@ h3,
 }
 
 .js .reveal {
-  opacity: 0;
-  transform: translateY(24px);
+  opacity: 1;
+  transform: none;
   transition: 0.65s ease;
 }
 
