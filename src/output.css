@@ -816,7 +816,7 @@ i.fa-phone::before {
   display: block;
 }
 .github-logo {
-  filter: drop-shadow(0 0 0 transparent);
+  filter: none;
 }
 html[data-theme="dark"] .github-logo {
   filter: invert(1);
