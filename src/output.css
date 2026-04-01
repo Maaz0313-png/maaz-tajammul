@@ -699,9 +699,13 @@ i.fa-solid, i.fa-regular, i.fab, i.fas {
   font-style: normal;
   line-height: 1;
   min-width: 1em;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  text-rendering: geometricPrecision;
 }
 i.fa-solid::before, i.fa-regular::before, i.fab::before, i.fas::before {
-  content: "•";
+  content: "✦";
+  font-size: 0.95em;
 }
 i.fa-bars::before {
   content: "☰";
@@ -716,14 +720,14 @@ i.fa-circle-half-stroke::before {
   content: "◐";
 }
 i.fa-sparkles::before, i.fa-wand-magic-sparkles::before {
-  content: "✦";
+  content: "✨";
 }
 i.fa-paper-plane::before {
-  content: "➤";
+  content: "➜";
 }
 i.fa-github::before {
   content: "GH";
-  font-size: 0.7em;
+  font-size: 0.66em;
   font-weight: 700;
 }
 i.fa-linkedin-in::before {
@@ -732,7 +736,7 @@ i.fa-linkedin-in::before {
   font-weight: 700;
 }
 i.fa-whatsapp::before {
-  content: "✆";
+  content: "◍";
 }
 i.fa-envelope::before {
   content: "✉";
@@ -741,32 +745,33 @@ i.fa-bolt::before {
   content: "⚡";
 }
 i.fa-layer-group::before {
-  content: "◫";
+  content: "▦";
 }
 i.fa-php::before {
-  content: "PHP";
-  font-size: 0.52em;
+  content: "php";
+  font-size: 0.5em;
   font-weight: 700;
+  text-transform: uppercase;
 }
 i.fa-laravel::before {
-  content: "L";
-  font-size: 0.8em;
+  content: "◈";
+  font-size: 0.86em;
   font-weight: 700;
 }
 i.fa-react::before {
-  content: "⚛";
+  content: "◎";
 }
 i.fa-js::before {
   content: "JS";
-  font-size: 0.65em;
+  font-size: 0.62em;
   font-weight: 700;
 }
 i.fa-database::before {
   content: "🗄";
 }
 i.fa-git-alt::before {
-  content: "Git";
-  font-size: 0.55em;
+  content: "⎇";
+  font-size: 0.9em;
   font-weight: 700;
 }
 i.fa-node-js::before {
