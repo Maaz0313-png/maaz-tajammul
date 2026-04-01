@@ -120,16 +120,18 @@ h3,
   filter: brightness(1.06);
 }
 
-.icon-btn {
-  width: 42px;
-  height: 42px;
-  border-radius: 12px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid var(--line);
-  background: var(--glass);
-  color: var(--text);
+@layer components {
+  .icon-btn {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--line);
+    background: var(--glass);
+    color: var(--text);
+  }
 }
 
 .mobile-panel {
