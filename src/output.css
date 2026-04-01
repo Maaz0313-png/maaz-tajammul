@@ -455,6 +455,9 @@ body {
   text-rendering: optimizeLegibility;
   overflow-x: hidden;
 }
+html {
+  overflow-x: hidden;
+}
 h1, h2, h3, .brand-mark {
   font-family: "Syne", "Outfit", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   letter-spacing: -0.02em;
@@ -685,6 +688,100 @@ h1, h2, h3, .brand-mark {
   background: linear-gradient(120deg, var(--accent-1), var(--accent-2));
   color: #fff;
   margin-top: 0.1rem;
+}
+i.fa-solid, i.fa-regular, i.fab, i.fas {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-style: normal;
+  line-height: 1;
+  min-width: 1em;
+}
+i.fa-solid::before, i.fa-regular::before, i.fab::before, i.fas::before {
+  content: "•";
+}
+i.fa-bars::before {
+  content: "☰";
+}
+i.fa-moon::before {
+  content: "☾";
+}
+i.fa-sun::before {
+  content: "☀";
+}
+i.fa-circle-half-stroke::before {
+  content: "◐";
+}
+i.fa-sparkles::before, i.fa-wand-magic-sparkles::before {
+  content: "✦";
+}
+i.fa-paper-plane::before {
+  content: "➤";
+}
+i.fa-github::before {
+  content: "GH";
+  font-size: 0.7em;
+  font-weight: 700;
+}
+i.fa-linkedin-in::before {
+  content: "in";
+  font-size: 0.75em;
+  font-weight: 700;
+}
+i.fa-whatsapp::before {
+  content: "✆";
+}
+i.fa-envelope::before {
+  content: "✉";
+}
+i.fa-bolt::before {
+  content: "⚡";
+}
+i.fa-layer-group::before {
+  content: "◫";
+}
+i.fa-php::before {
+  content: "PHP";
+  font-size: 0.52em;
+  font-weight: 700;
+}
+i.fa-laravel::before {
+  content: "L";
+  font-size: 0.8em;
+  font-weight: 700;
+}
+i.fa-react::before {
+  content: "⚛";
+}
+i.fa-js::before {
+  content: "JS";
+  font-size: 0.65em;
+  font-weight: 700;
+}
+i.fa-database::before {
+  content: "🗄";
+}
+i.fa-git-alt::before {
+  content: "Git";
+  font-size: 0.55em;
+  font-weight: 700;
+}
+i.fa-node-js::before {
+  content: "⬢";
+}
+i.fa-css3-alt::before {
+  content: "CSS";
+  font-size: 0.55em;
+  font-weight: 700;
+}
+i.fa-server::before {
+  content: "🖧";
+}
+i.fa-rocket::before {
+  content: "🚀";
+}
+i.fa-phone::before {
+  content: "☎";
 }
 .feature-row h3 {
   margin-bottom: 0.25rem;
