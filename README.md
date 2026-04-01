@@ -1,8 +1,9 @@
-# Maaz Tajammul Portfolio
+# Maaz Tajammul — Portfolio Website
 
-Personal portfolio website for **Maaz Tajammul** (Full Stack Laravel Developer), built as a single-page site in `index.html`.
+This repository contains the personal portfolio website of **Maaz Tajammul**, a Full Stack Laravel Developer.  
+The site is implemented as a single-page experience in `index.html`.
 
-## Website Sections
+## Portfolio Sections
 
 - Home / Hero
 - About
@@ -26,13 +27,13 @@ Personal portfolio website for **Maaz Tajammul** (Full Stack Laravel Developer),
 npm install
 ```
 
-2. Build styles:
+2. Build the stylesheet:
 
 ```bash
 npm run build
 ```
 
-3. Run Tailwind in watch mode:
+3. Start Tailwind in watch mode:
 
 ```bash
 npm run watch
@@ -40,8 +41,8 @@ npm run watch
 
 4. Open `index.html` in your browser.
 
-## Repository
+## Project Structure
 
-- Main page: `index.html`
+- Main page markup: `index.html`
 - Tailwind source: `src/input.css`
-- Tailwind output: `src/output.css`
+- Compiled stylesheet: `src/output.css`
