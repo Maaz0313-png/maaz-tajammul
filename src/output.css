@@ -748,10 +748,9 @@ i.fa-layer-group::before {
   content: "▦";
 }
 i.fa-php::before {
-  content: "php";
+  content: "PHP";
   font-size: 0.5em;
   font-weight: 700;
-  text-transform: uppercase;
 }
 i.fa-laravel::before {
   content: "◈";
