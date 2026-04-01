@@ -431,6 +431,9 @@
   --accent-1: #8b5cf6;
   --accent-2: #06b6d4;
   --accent-3: #f97316;
+  --project-media-min: 240px;
+  --project-media-fluid: 34vw;
+  --project-media-max: 420px;
 }
 html[data-theme="light"] {
   --bg: #f4f7ff;
@@ -834,7 +837,7 @@ i.fa-phone::before {
   }
 }
 .project-media {
-  height: clamp(240px, 34vw, 420px);
+  height: clamp(var(--project-media-min), var(--project-media-fluid), var(--project-media-max));
   overflow: hidden;
 }
 .project-media img {
@@ -955,8 +958,8 @@ i.fa-phone::before {
   color: var(--muted);
 }
 .js .reveal {
-  opacity: 1;
-  transform: none;
+  opacity: 0;
+  transform: translateY(24px);
   transition: 0.65s ease;
 }
 .js .reveal.is-visible {
