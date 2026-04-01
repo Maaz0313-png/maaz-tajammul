@@ -477,12 +477,10 @@ i.fa-phone::before {
   min-height: 120px;
 }
 
-.skill-tile i {
-  font-size: 1.8rem;
-  background: linear-gradient(120deg, var(--accent-1), var(--accent-2));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+.skill-logo {
+  width: 2rem;
+  height: 2rem;
+  display: block;
 }
 
 .skill-tile span {
