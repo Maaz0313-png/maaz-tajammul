@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Maaz Tajammul — Full Stack Laravel Developer</title>
+    <title>Maaz Tajammul - Full Stack Laravel Developer</title>
     <meta name="description"
         content="Magnetic portfolio of Maaz Tajammul — Full Stack Laravel Developer building high-performance products for startups, brands, and teams." />
     <meta property="og:title" content="Maaz Tajammul — Full Stack Laravel Developer" />
@@ -25,7 +25,7 @@
 
 <body>
     <div class="noise-layer" aria-hidden="true"></div>
-    <div id="cursor-glow" aria-hidden="true"></div>
+    <div id="portfolio-cursor-glow" aria-hidden="true"></div>
 
     <header class="site-header">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -440,10 +440,12 @@
         const navLinks = document.querySelectorAll('.nav-pill[href^="#"]');
         const sections = document.querySelectorAll('main section[id]');
 
+        const HEADER_OFFSET = 140;
+
         const setActiveLink = () => {
             let currentId = 'home';
             sections.forEach((section) => {
-                if (window.scrollY >= section.offsetTop - 140) currentId = section.id;
+                if (window.scrollY >= section.offsetTop - HEADER_OFFSET) currentId = section.id;
             });
             navLinks.forEach(link => {
                 const isActive = link.getAttribute('href') === `#${currentId}`;
@@ -454,7 +456,7 @@
         window.addEventListener('scroll', setActiveLink, { passive: true });
         setActiveLink();
 
-        const cursorGlow = document.getElementById('cursor-glow');
+        const cursorGlow = document.getElementById('portfolio-cursor-glow');
         window.addEventListener('pointermove', (e) => {
             cursorGlow.style.left = `${e.clientX}px`;
             cursorGlow.style.top = `${e.clientY}px`;
