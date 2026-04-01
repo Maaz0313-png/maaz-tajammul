@@ -483,6 +483,14 @@ i.fa-phone::before {
   display: block;
 }
 
+.github-logo {
+  filter: none;
+}
+
+html[data-theme="dark"] .github-logo {
+  filter: invert(1);
+}
+
 .skill-tile span {
   font-weight: 600;
 }
