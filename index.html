@@ -40,7 +40,7 @@
                     <a href="#education" class="nav-pill">Education</a>
                     <a href="#contact" class="nav-pill nav-pill-cta">Let’s Talk</a>
                     <button id="theme-toggle" class="icon-btn" aria-label="Toggle theme">
-                        <img class="ui-icon" src="./assets/icons/ui/darkreader.svg" alt="" aria-hidden="true" />
+                        <img class="ui-icon" src="./assets/icons/ui/theme-dark-tailwind.svg" alt="" aria-hidden="true" />
                     </button>
                 </div>
             </nav>
@@ -55,7 +55,7 @@
                     <a href="#contact" class="mobile-link">Let’s Talk</a>
                     <button id="theme-toggle-mobile" class="mobile-link text-left" type="button">
                         <span class="inline-flex items-center gap-2">
-                            <img class="ui-icon" src="./assets/icons/ui/darkreader.svg" alt="" aria-hidden="true" />
+                            <img class="ui-icon" src="./assets/icons/ui/theme-dark-tailwind.svg" alt="" aria-hidden="true" />
                             Toggle Theme
                         </span>
                     </button>
@@ -410,10 +410,10 @@
         const setThemeIcon = () => {
             const isLight = root.getAttribute('data-theme') === 'light';
             if (themeBtn) {
-                themeBtn.innerHTML = `<img class="ui-icon" src="${isLight ? './assets/icons/ui/lightburn.svg' : './assets/icons/ui/darkreader.svg'}" alt="" aria-hidden="true" />`;
+                themeBtn.innerHTML = `<img class="ui-icon" src="${isLight ? './assets/icons/ui/theme-light-tailwind.svg' : './assets/icons/ui/theme-dark-tailwind.svg'}" alt="" aria-hidden="true" />`;
             }
             if (themeBtnMobile) {
-                themeBtnMobile.innerHTML = `<span class="inline-flex items-center gap-2"><img class="ui-icon" src="${isLight ? './assets/icons/ui/lightburn.svg' : './assets/icons/ui/darkreader.svg'}" alt="" aria-hidden="true" />Toggle Theme</span>`;
+                themeBtnMobile.innerHTML = `<span class="inline-flex items-center gap-2"><img class="ui-icon" src="${isLight ? './assets/icons/ui/theme-light-tailwind.svg' : './assets/icons/ui/theme-dark-tailwind.svg'}" alt="" aria-hidden="true" />Toggle Theme</span>`;
             }
         };
 
