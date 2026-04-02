@@ -29,7 +29,7 @@
 
                 <button id="mobile-menu-btn" class="icon-btn md:hidden" aria-label="Open menu" aria-expanded="false"
                     aria-controls="mobile-menu">
-                    <i class="fa-solid fa-bars"></i>
+                    <img class="ui-icon" src="./assets/icons/ui/stackshare.svg" alt="" aria-hidden="true" />
                 </button>
 
                 <div class="hidden md:flex items-center gap-2">
@@ -40,7 +40,7 @@
                     <a href="#education" class="nav-pill">Education</a>
                     <a href="#contact" class="nav-pill nav-pill-cta">Let’s Talk</a>
                     <button id="theme-toggle" class="icon-btn" aria-label="Toggle theme">
-                        <i class="fa-solid fa-moon"></i>
+                        <img class="ui-icon" src="./assets/icons/ui/theme-dark-tailwind.svg" alt="" aria-hidden="true" />
                     </button>
                 </div>
             </nav>
@@ -54,7 +54,10 @@
                     <a href="#education" class="mobile-link">Education</a>
                     <a href="#contact" class="mobile-link">Let’s Talk</a>
                     <button id="theme-toggle-mobile" class="mobile-link text-left" type="button">
-                        <i class="fa-solid fa-circle-half-stroke mr-2"></i> Toggle Theme
+                        <span class="inline-flex items-center gap-2">
+                            <img class="ui-icon" src="./assets/icons/ui/theme-dark-tailwind.svg" alt="" aria-hidden="true" />
+                            Toggle Theme
+                        </span>
                     </button>
                 </div>
             </div>
@@ -79,11 +82,11 @@
 
                         <div class="mt-8 flex flex-wrap gap-3 reveal">
                             <a href="#projects" class="btn-primary">
-                                <i class="fa-solid fa-sparkles"></i>
+                                <img class="ui-icon" src="./assets/icons/ui/apachespark.svg" alt="" aria-hidden="true" />
                                 Explore Projects
                             </a>
                             <a href="#contact" class="btn-ghost">
-                                <i class="fa-regular fa-paper-plane"></i>
+                                <img class="ui-icon" src="./assets/icons/ui/telegram.svg" alt="" aria-hidden="true" />
                                 Start a Conversation
                             </a>
                         </div>
@@ -106,36 +109,37 @@
 
                     <aside class="hero-card reveal" aria-label="Professional Snapshot">
                         <p class="text-sm uppercase tracking-[0.2em] text-slate-500/80 mb-4">Current Focus</p>
-                        <h2 class="text-2xl font-bold mb-4">Senior Full Stack Developer @ Brandavio</h2>
+                        <h2 class="text-2xl font-bold mb-4">Software Engineer @ Zafwah Technologies</h2>
                         <p class="text-slate-500 leading-relaxed mb-6">
-                            Delivering scalable web products with Laravel, Inertia.js, and React. Translating product
-                            ideas into polished, maintainable, high-impact experiences.
+                            Joined Zafwah Technologies in Feb 2026 after completing my tenure at Brandavio. Building the
+                            company website while learning and applying Shopify API, RoboCall API, and Branded SMS API
+                            solutions through h3techs.com.
                         </p>
 
                         <div class="chip-grid mb-6">
+                            <span class="skill-chip">Shopify API</span>
+                            <span class="skill-chip">RoboCall API</span>
+                            <span class="skill-chip">Branded SMS API</span>
                             <span class="skill-chip">Laravel</span>
                             <span class="skill-chip">React.js</span>
-                            <span class="skill-chip">Inertia.js</span>
                             <span class="skill-chip">Tailwind</span>
-                            <span class="skill-chip">MySQL</span>
-                            <span class="skill-chip">Product UX</span>
                         </div>
 
                         <div class="flex gap-3">
                             <a href="https://github.com/Maaz0313" target="_blank" rel="noopener noreferrer" class="social-orb"
                                 aria-label="GitHub">
-                                <i class="fab fa-github"></i>
+                                <img class="si-icon" src="./assets/icons/social/github.svg" alt="GitHub" />
                             </a>
                             <a href="https://linkedin.com/in/maaz-tajammul-99ba661b2/" target="_blank"
                                 rel="noopener noreferrer" class="social-orb" aria-label="LinkedIn">
-                                <i class="fab fa-linkedin-in"></i>
+                                <img class="si-icon" src="./assets/icons/social/linkedin.svg" alt="LinkedIn" />
                             </a>
                             <a href="https://wa.me/923133987079" target="_blank" rel="noopener noreferrer"
                                 class="social-orb" aria-label="WhatsApp">
-                                <i class="fab fa-whatsapp"></i>
+                                <img class="si-icon" src="./assets/icons/social/whatsapp.svg" alt="WhatsApp" />
                             </a>
                             <a href="mailto:maaztajammul63@gmail.com" class="social-orb" aria-label="Email">
-                                <i class="fa-regular fa-envelope"></i>
+                                <img class="si-icon gmail-icon" src="./assets/icons/social/gmail.svg" alt="Email" />
                             </a>
                         </div>
                     </aside>
@@ -162,21 +166,21 @@
                     <article class="panel reveal">
                         <div class="space-y-4">
                             <div class="feature-row">
-                                <i class="fa-solid fa-bolt"></i>
+                                <img class="feature-icon-img" src="./assets/icons/skills/speedtest.svg" alt="Delivery Velocity icon" />
                                 <div>
                                     <h3>Delivery Velocity</h3>
                                     <p>Move from concept to deployable features with clear milestones.</p>
                                 </div>
                             </div>
                             <div class="feature-row">
-                                <i class="fa-solid fa-layer-group"></i>
+                                <img class="feature-icon-img" src="./assets/icons/ui/stackshare.svg" alt="Scalable Foundations icon" />
                                 <div>
                                     <h3>Scalable Foundations</h3>
                                     <p>Architect systems that stay maintainable as products evolve.</p>
                                 </div>
                             </div>
                             <div class="feature-row">
-                                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                                <img class="feature-icon-img" src="./assets/icons/ui/apachespark.svg" alt="Design-Driven Engineering icon" />
                                 <div>
                                     <h3>Design-Driven Engineering</h3>
                                     <p>Interfaces that feel premium while still being practical and fast.</p>
@@ -289,13 +293,25 @@
 
                 <article class="panel reveal">
                     <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 mb-6">
+                        <h3 class="text-2xl font-bold">Software Engineer • Zafwah Technologies</h3>
+                        <p class="text-slate-500/85">Feb 2026 — Present · Karachi, Pakistan</p>
+                    </div>
+                    <ul class="timeline-list">
+                        <li>Started building Zafwah Technologies’ company website with production-focused architecture and UI quality.</li>
+                        <li>Learning and integrating Shopify API workflows for product, customer, and order-related capabilities.</li>
+                        <li>Learning RoboCall API services from h3techs.com for automated voice-call communication use cases.</li>
+                        <li>Learning Branded SMS API services from h3techs.com for branded transactional and campaign messaging.</li>
+                    </ul>
+                </article>
+
+                <article class="panel reveal mt-4">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 mb-6">
                         <h3 class="text-2xl font-bold">Senior Full Stack PHP/Laravel Developer • Brandavio</h3>
-                        <p class="text-slate-500/85">Oct 2023 — Present · Karachi, Pakistan</p>
+                        <p class="text-slate-500/85">Oct 2023 — Feb 2026 · Karachi, Pakistan</p>
                     </div>
                     <ul class="timeline-list">
                         <li>Shipped production platforms in Laravel and React with measurable business impact.</li>
-                        <li>Improved maintainability through cleaner structure, reusable modules, and tighter standards.
-                        </li>
+                        <li>Improved maintainability through cleaner structure, reusable modules, and tighter standards.</li>
                         <li>Worked closely with design and product teams to convert ideas into stable releases.</li>
                         <li>Balanced delivery speed with robust architecture and long-term scalability.</li>
                     </ul>
@@ -347,24 +363,24 @@
 
                     <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
                         <a class="contact-block" href="mailto:maaztajammul63@gmail.com">
-                            <i class="fa-regular fa-envelope"></i>
+                            <img class="si-icon contact-si-icon gmail-icon" src="./assets/icons/social/gmail.svg" alt="Email" />
                             <span>Email</span>
                             <small>maaztajammul63@gmail.com</small>
                         </a>
                         <a class="contact-block" href="tel:+923133987079">
-                            <i class="fa-solid fa-phone"></i>
+                            <img class="si-icon contact-si-icon" src="./assets/icons/social/aircall.svg" alt="Phone" />
                             <span>Phone</span>
                             <small>+92 313 3987079</small>
                         </a>
                         <a class="contact-block" href="https://wa.me/923133987079" target="_blank"
                             rel="noopener noreferrer">
-                            <i class="fab fa-whatsapp"></i>
+                            <img class="si-icon contact-si-icon" src="./assets/icons/social/whatsapp.svg" alt="WhatsApp" />
                             <span>WhatsApp</span>
                             <small>Quick chat</small>
                         </a>
                         <a class="contact-block" href="https://linkedin.com/in/maaz-tajammul-99ba661b2/" target="_blank"
                             rel="noopener noreferrer">
-                            <i class="fab fa-linkedin-in"></i>
+                            <img class="si-icon contact-si-icon" src="./assets/icons/social/linkedin.svg" alt="LinkedIn" />
                             <span>LinkedIn</span>
                             <small>Professional profile</small>
                         </a>
@@ -393,7 +409,12 @@
 
         const setThemeIcon = () => {
             const isLight = root.getAttribute('data-theme') === 'light';
-            if (themeBtn) themeBtn.innerHTML = `<i class="fa-solid ${isLight ? 'fa-sun' : 'fa-moon'}"></i>`;
+            if (themeBtn) {
+                themeBtn.innerHTML = `<img class="ui-icon" src="${isLight ? './assets/icons/ui/theme-light-tailwind.svg' : './assets/icons/ui/theme-dark-tailwind.svg'}" alt="" aria-hidden="true" />`;
+            }
+            if (themeBtnMobile) {
+                themeBtnMobile.innerHTML = `<span class="inline-flex items-center gap-2"><img class="ui-icon" src="${isLight ? './assets/icons/ui/theme-light-tailwind.svg' : './assets/icons/ui/theme-dark-tailwind.svg'}" alt="" aria-hidden="true" />Toggle Theme</span>`;
+            }
         };
 
         setThemeIcon();
