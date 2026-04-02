@@ -29,7 +29,7 @@
 
                 <button id="mobile-menu-btn" class="icon-btn md:hidden" aria-label="Open menu" aria-expanded="false"
                     aria-controls="mobile-menu">
-                    <img class="ui-icon" src="./assets/icons/skills/openapiinitiative.svg" alt="" aria-hidden="true" />
+                    <img class="ui-icon" src="./assets/icons/ui/stackshare.svg" alt="" aria-hidden="true" />
                 </button>
 
                 <div class="hidden md:flex items-center gap-2">
@@ -40,7 +40,7 @@
                     <a href="#education" class="nav-pill">Education</a>
                     <a href="#contact" class="nav-pill nav-pill-cta">Let’s Talk</a>
                     <button id="theme-toggle" class="icon-btn" aria-label="Toggle theme">
-                        <img class="ui-icon" src="./assets/icons/social/github.svg" alt="" aria-hidden="true" />
+                        <img class="ui-icon" src="./assets/icons/ui/darkreader.svg" alt="" aria-hidden="true" />
                     </button>
                 </div>
             </nav>
@@ -55,7 +55,7 @@
                     <a href="#contact" class="mobile-link">Let’s Talk</a>
                     <button id="theme-toggle-mobile" class="mobile-link text-left" type="button">
                         <span class="inline-flex items-center gap-2">
-                            <img class="ui-icon" src="./assets/icons/skills/tailwindcss.svg" alt="" aria-hidden="true" />
+                            <img class="ui-icon" src="./assets/icons/ui/darkreader.svg" alt="" aria-hidden="true" />
                             Toggle Theme
                         </span>
                     </button>
@@ -82,11 +82,11 @@
 
                         <div class="mt-8 flex flex-wrap gap-3 reveal">
                             <a href="#projects" class="btn-primary">
-                                <img class="ui-icon" src="./assets/icons/skills/speedtest.svg" alt="" aria-hidden="true" />
+                                <img class="ui-icon" src="./assets/icons/ui/apachespark.svg" alt="" aria-hidden="true" />
                                 Explore Projects
                             </a>
                             <a href="#contact" class="btn-ghost">
-                                <img class="ui-icon" src="./assets/icons/skills/openapiinitiative.svg" alt="" aria-hidden="true" />
+                                <img class="ui-icon" src="./assets/icons/ui/telegram.svg" alt="" aria-hidden="true" />
                                 Start a Conversation
                             </a>
                         </div>
@@ -173,14 +173,14 @@
                                 </div>
                             </div>
                             <div class="feature-row">
-                                <img class="feature-icon-img" src="./assets/icons/skills/openapiinitiative.svg" alt="Scalable Foundations icon" />
+                                <img class="feature-icon-img" src="./assets/icons/ui/stackshare.svg" alt="Scalable Foundations icon" />
                                 <div>
                                     <h3>Scalable Foundations</h3>
                                     <p>Architect systems that stay maintainable as products evolve.</p>
                                 </div>
                             </div>
                             <div class="feature-row">
-                                <img class="feature-icon-img" src="./assets/icons/skills/tailwindcss.svg" alt="Design-Driven Engineering icon" />
+                                <img class="feature-icon-img" src="./assets/icons/ui/apachespark.svg" alt="Design-Driven Engineering icon" />
                                 <div>
                                     <h3>Design-Driven Engineering</h3>
                                     <p>Interfaces that feel premium while still being practical and fast.</p>
@@ -410,10 +410,10 @@
         const setThemeIcon = () => {
             const isLight = root.getAttribute('data-theme') === 'light';
             if (themeBtn) {
-                themeBtn.innerHTML = `<img class="ui-icon" src="${isLight ? './assets/icons/social/gmail.svg' : './assets/icons/social/github.svg'}" alt="" aria-hidden="true" />`;
+                themeBtn.innerHTML = `<img class="ui-icon" src="${isLight ? './assets/icons/ui/lightburn.svg' : './assets/icons/ui/darkreader.svg'}" alt="" aria-hidden="true" />`;
             }
             if (themeBtnMobile) {
-                themeBtnMobile.innerHTML = `<span class="inline-flex items-center gap-2"><img class="ui-icon" src="${isLight ? './assets/icons/social/gmail.svg' : './assets/icons/skills/tailwindcss.svg'}" alt="" aria-hidden="true" />Toggle Theme</span>`;
+                themeBtnMobile.innerHTML = `<span class="inline-flex items-center gap-2"><img class="ui-icon" src="${isLight ? './assets/icons/ui/lightburn.svg' : './assets/icons/ui/darkreader.svg'}" alt="" aria-hidden="true" />Toggle Theme</span>`;
             }
         };
 
