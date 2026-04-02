@@ -121,7 +121,7 @@ h3,
 }
 
 @layer components {
-  .icon-btn {
+.icon-btn {
     width: 42px;
     height: 42px;
     border-radius: 12px;
@@ -132,6 +132,19 @@ h3,
     background: var(--glass);
     color: var(--text);
   }
+}
+
+.ui-glyph {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.si-icon {
+  width: 1.05rem;
+  height: 1.05rem;
+  display: block;
 }
 
 .mobile-panel {
@@ -314,7 +327,7 @@ h3,
   gap: 0.9rem;
 }
 
-.feature-row i {
+.feature-icon {
   width: 2.2rem;
   height: 2.2rem;
   display: inline-flex;
@@ -324,136 +337,6 @@ h3,
   background: linear-gradient(120deg, var(--accent-1), var(--accent-2));
   color: #fff;
   margin-top: 0.1rem;
-}
-
-i.fa-solid,
-i.fa-regular,
-i.fab,
-i.fas {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-style: normal;
-  line-height: 1;
-  min-width: 1em;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  text-rendering: geometricPrecision;
-}
-
-i.fa-solid::before,
-i.fa-regular::before,
-i.fab::before,
-i.fas::before {
-  content: "✦";
-  font-size: 0.95em;
-}
-
-i.fa-bars::before {
-  content: "☰";
-}
-
-i.fa-moon::before {
-  content: "☾";
-}
-
-i.fa-sun::before {
-  content: "☀";
-}
-
-i.fa-circle-half-stroke::before {
-  content: "◐";
-}
-
-i.fa-sparkles::before,
-i.fa-wand-magic-sparkles::before {
-  content: "✨";
-}
-
-i.fa-paper-plane::before {
-  content: "➜";
-}
-
-i.fa-github::before {
-  content: "GH";
-  font-size: 0.66em;
-  font-weight: 700;
-}
-
-i.fa-linkedin-in::before {
-  content: "in";
-  font-size: 0.75em;
-  font-weight: 700;
-}
-
-i.fa-whatsapp::before {
-  content: "◍";
-}
-
-i.fa-envelope::before {
-  content: "✉";
-}
-
-i.fa-bolt::before {
-  content: "⚡";
-}
-
-i.fa-layer-group::before {
-  content: "▦";
-}
-
-i.fa-php::before {
-  content: "PHP";
-  font-size: 0.5em;
-  font-weight: 700;
-}
-
-i.fa-laravel::before {
-  content: "◈";
-  font-size: 0.86em;
-  font-weight: 700;
-}
-
-i.fa-react::before {
-  content: "◎";
-}
-
-i.fa-js::before {
-  content: "JS";
-  font-size: 0.62em;
-  font-weight: 700;
-}
-
-i.fa-database::before {
-  content: "🗄";
-}
-
-i.fa-git-alt::before {
-  content: "⎇";
-  font-size: 0.9em;
-  font-weight: 700;
-}
-
-i.fa-node-js::before {
-  content: "⬢";
-}
-
-i.fa-css3-alt::before {
-  content: "CSS";
-  font-size: 0.55em;
-  font-weight: 700;
-}
-
-i.fa-server::before {
-  content: "🖧";
-}
-
-i.fa-rocket::before {
-  content: "🚀";
-}
-
-i.fa-phone::before {
-  content: "☎";
 }
 
 .feature-row h3 {
@@ -651,10 +534,10 @@ html[data-theme="dark"] .github-logo {
   background: var(--glass);
 }
 
-.contact-block i {
-  font-size: 1.35rem;
+.contact-si-icon {
+  width: 1.35rem;
+  height: 1.35rem;
   margin-bottom: 0.2rem;
-  color: var(--accent-2);
 }
 
 .contact-block span {
