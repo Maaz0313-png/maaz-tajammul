@@ -29,7 +29,7 @@
 
                 <button id="mobile-menu-btn" class="icon-btn md:hidden" aria-label="Open menu" aria-expanded="false"
                     aria-controls="mobile-menu">
-                    <span class="ui-glyph" aria-hidden="true">☰</span>
+                    <img class="ui-icon" src="./assets/icons/skills/openapiinitiative.svg" alt="" aria-hidden="true" />
                 </button>
 
                 <div class="hidden md:flex items-center gap-2">
@@ -40,7 +40,7 @@
                     <a href="#education" class="nav-pill">Education</a>
                     <a href="#contact" class="nav-pill nav-pill-cta">Let’s Talk</a>
                     <button id="theme-toggle" class="icon-btn" aria-label="Toggle theme">
-                        <span class="ui-glyph" aria-hidden="true">☾</span>
+                        <img class="ui-icon" src="./assets/icons/social/github.svg" alt="" aria-hidden="true" />
                     </button>
                 </div>
             </nav>
@@ -54,7 +54,10 @@
                     <a href="#education" class="mobile-link">Education</a>
                     <a href="#contact" class="mobile-link">Let’s Talk</a>
                     <button id="theme-toggle-mobile" class="mobile-link text-left" type="button">
-                        <span class="ui-glyph mr-2" aria-hidden="true">◐</span> Toggle Theme
+                        <span class="inline-flex items-center gap-2">
+                            <img class="ui-icon" src="./assets/icons/skills/tailwindcss.svg" alt="" aria-hidden="true" />
+                            Toggle Theme
+                        </span>
                     </button>
                 </div>
             </div>
@@ -79,11 +82,11 @@
 
                         <div class="mt-8 flex flex-wrap gap-3 reveal">
                             <a href="#projects" class="btn-primary">
-                                <span class="ui-glyph" aria-hidden="true">✨</span>
+                                <img class="ui-icon" src="./assets/icons/skills/speedtest.svg" alt="" aria-hidden="true" />
                                 Explore Projects
                             </a>
                             <a href="#contact" class="btn-ghost">
-                                <span class="ui-glyph" aria-hidden="true">➜</span>
+                                <img class="ui-icon" src="./assets/icons/skills/openapiinitiative.svg" alt="" aria-hidden="true" />
                                 Start a Conversation
                             </a>
                         </div>
@@ -406,7 +409,12 @@
 
         const setThemeIcon = () => {
             const isLight = root.getAttribute('data-theme') === 'light';
-            if (themeBtn) themeBtn.innerHTML = `<span class="ui-glyph" aria-hidden="true">${isLight ? '☀' : '☾'}</span>`;
+            if (themeBtn) {
+                themeBtn.innerHTML = `<img class="ui-icon" src="${isLight ? './assets/icons/social/gmail.svg' : './assets/icons/social/github.svg'}" alt="" aria-hidden="true" />`;
+            }
+            if (themeBtnMobile) {
+                themeBtnMobile.innerHTML = `<span class="inline-flex items-center gap-2"><img class="ui-icon" src="${isLight ? './assets/icons/social/gmail.svg' : './assets/icons/skills/tailwindcss.svg'}" alt="" aria-hidden="true" />Toggle Theme</span>`;
+            }
         };
 
         setThemeIcon();
