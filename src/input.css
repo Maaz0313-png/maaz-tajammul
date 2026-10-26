@@ -147,7 +147,10 @@ button {
   min-width: 185px;
 }
 .identity img {
-  border-radius: 9px;
+  border-radius: 8px;
+  padding: 4px;
+  object-fit: contain;
+  background: #111311;
 }
 .window-title,
 .mini-label,
@@ -3017,4 +3020,22 @@ main:focus {
     padding: 15px;
     font-size: 9px;
   }
+}
+
+.stack-icon {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+.mock-brand img {
+  background: #111311;
+  padding: 2px;
+  border-radius: 4px;
+  object-fit: contain;
+}
+
+.file-icon {
+  flex-shrink: 0;
+  white-space: nowrap;
 }

@@ -279,14 +279,14 @@ export function ArchitectureDemo({ active }) {
                 <div className="mock-brand">
                   <img
                     src={
-                      new URL("../assets/icons/monogram.svg", import.meta.url)
+                      new URL("../assets/brand/mt-logo.png", import.meta.url)
                         .href
                     }
                     width="21"
                     height="21"
                     alt=""
                   />
-                  <strong>maaz.dev</strong>
+                  <strong>MT</strong>
                   <span>
                     {initial
                       ? completed

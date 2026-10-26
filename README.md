@@ -20,7 +20,7 @@ Imported project images and the shared logo/favicon receive content-hashed URLs.
 ## Workspace
 
 - Collapsible workspace folder with keyboard support and a saved collapse state.
-- Official React, Inertia, Laravel, and Tailwind documentation links in the sidebar.
+- React, Inertia, Laravel, and Tailwind icons with official documentation links in the sidebar.
 - Hash-based file navigation with browser history support.
 - Persistent session timer and Karachi clock (not server uptime).
 - Ctrl/Cmd K command palette, keyboard search, and Escape dismissal.
@@ -53,7 +53,7 @@ React for this demo but does not run Laravel or issue real Inertia requests.
 - src/architecture.jsx — React lifecycle state machine and Motion animation.
 - src/input.css — design system, responsive layouts, and animation styles.
 - vite.config.mjs — React and Tailwind build integrations.
-- assets/icons/monogram.svg — shared logo and favicon.
+- assets/brand/ — ChatGPT-generated MT logo, optimized UI/favicon exports, and generation prompt.
 
 ## Animation and protocol references
 

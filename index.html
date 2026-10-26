@@ -15,7 +15,7 @@
       content="Full stack thinking. From the first route to the final interaction."
     />
     <meta property="og:type" content="website" />
-    <link rel="icon" type="image/svg+xml" href="./assets/icons/monogram.svg" />
+    <link rel="icon" type="image/png" href="./assets/brand/mt-favicon.png" />
     <link rel="stylesheet" href="./src/input.css" />
     <script>
       try {
@@ -28,13 +28,13 @@
   <body>
     <a class="skip-link" href="#content">Skip to content</a>
     <header class="topbar">
-      <a class="identity" href="#home"
+      <a class="identity" href="#home" aria-label="Maaz Tajammul home"
         ><img
-          src="./assets/icons/monogram.svg"
+          src="./assets/brand/mt-logo.png"
           width="35"
           height="35"
-          alt="MT"
-        /><span>maaz<span class="identity-muted">.dev</span></span></a
+          alt=""
+        /><span>MT</span></a
       >
       <div class="window-title">
         PERSONAL WORKSPACE <span>/</span> PORTFOLIO v2.0
@@ -103,30 +103,58 @@
             href="https://react.dev/learn"
             target="_blank"
             rel="noopener noreferrer"
-            ><i class="stack-dot blue" aria-hidden="true"></i> React
-            <span aria-hidden="true">↗</span></a
+            ><img
+              class="stack-icon"
+              src="./assets/icons/skills/react.svg"
+              width="18"
+              height="18"
+              alt=""
+              aria-hidden="true"
+            />
+            React <span aria-hidden="true">↗</span></a
           >
           <a
             href="https://inertiajs.com/"
             target="_blank"
             rel="noopener noreferrer"
-            ><i class="stack-dot purple" aria-hidden="true"></i> Inertia.js
-            <span aria-hidden="true">↗</span></a
+            ><img
+              class="stack-icon"
+              src="./assets/icons/skills/inertia.svg"
+              width="18"
+              height="18"
+              alt=""
+              aria-hidden="true"
+            />
+            Inertia.js <span aria-hidden="true">↗</span></a
           >
           <a
             href="https://laravel.com/docs"
             target="_blank"
             rel="noopener noreferrer"
-            ><i class="stack-dot red" aria-hidden="true"></i> Laravel
-            <span aria-hidden="true">↗</span></a
+            ><img
+              class="stack-icon"
+              src="./assets/icons/skills/laravel.svg"
+              width="18"
+              height="18"
+              alt=""
+              aria-hidden="true"
+            />
+            Laravel <span aria-hidden="true">↗</span></a
           >
           <a
             href="https://tailwindcss.com/docs"
             title="Tailwind CSS documentation"
             target="_blank"
             rel="noopener noreferrer"
-            ><i class="stack-dot cyan" aria-hidden="true"></i> Tailwind CSS
-            <span aria-hidden="true">↗</span></a
+            ><img
+              class="stack-icon"
+              src="./assets/icons/skills/tailwindcss.svg"
+              width="18"
+              height="18"
+              alt=""
+              aria-hidden="true"
+            />
+            Tailwind CSS <span aria-hidden="true">↗</span></a
           >
         </div>
         <div class="sidebar-bottom">
@@ -200,71 +228,21 @@
                   <span>developer.config.ts</span
                   ><span class="code-language">TS</span>
                 </div>
+                <!-- prettier-ignore -->
                 <div class="code-body">
-                  <div>
-                    <b>01</b
-                    ><span class="code-comment"
-                      >// the person behind the pixels</span
-                    >
-                  </div>
-                  <div>
-                    <b>02</b
-                    ><span
-                      ><span class="purple">const</span> developer
-                      <span class="muted">= {</span></span
-                    >
-                  </div>
-                  <div>
-                    <b>03</b
-                    ><span>
-                      name: <span class="green">'Maaz Tajammul'</span>,</span
-                    >
-                  </div>
-                  <div>
-                    <b>04</b
-                    ><span>
-                      role:
-                      <span class="green">'Full Stack Developer'</span>,</span
-                    >
-                  </div>
-                  <div><b>05</b><span> stack: [</span></div>
-                  <div>
-                    <b>06</b
-                    ><span>
-                      <span class="green">'React'</span>,
-                      <span class="green">'Inertia'</span>,</span
-                    >
-                  </div>
-                  <div>
-                    <b>07</b
-                    ><span>
-                      <span class="green">'Laravel'</span>,
-                      <span class="green">'Tailwind'</span></span
-                    >
-                  </div>
-                  <div><b>08</b><span> ],</span></div>
-                  <div>
-                    <b>09</b
-                    ><span>
-                      approach:
-                      <span class="green">'Own the whole thing'</span>,</span
-                    >
-                  </div>
-                  <div>
-                    <b>10</b
-                    ><span>
-                      curiosity: <span class="purple">Infinity</span></span
-                    >
-                  </div>
+                  <div><b>01</b><span class="code-comment">// the person behind the pixels</span></div>
+                  <div><b>02</b><span><span class="purple">const</span> developer <span class="muted">= {</span></span></div>
+                  <div><b>03</b><span>  name: <span class="green">'Maaz Tajammul'</span>,</span></div>
+                  <div><b>04</b><span>  role: <span class="green">'Full Stack Developer'</span>,</span></div>
+                  <div><b>05</b><span>  stack: [</span></div>
+                  <div><b>06</b><span>    <span class="green">'React'</span>, <span class="green">'Inertia'</span>,</span></div>
+                  <div><b>07</b><span>    <span class="green">'Laravel'</span>, <span class="green">'Tailwind'</span></span></div>
+                  <div><b>08</b><span>  ],</span></div>
+                  <div><b>09</b><span>  approach: <span class="green">'Own the whole thing'</span>,</span></div>
+                  <div><b>10</b><span>  curiosity: <span class="purple">Infinity</span></span></div>
                   <div><b>11</b><span class="muted">};</span></div>
                   <div><b>12</b><span></span></div>
-                  <div>
-                    <b>13</b
-                    ><span
-                      ><span class="purple">export default</span>
-                      developer;</span
-                    >
-                  </div>
+                  <div><b>13</b><span><span class="purple">export default</span> developer;</span></div>
                 </div>
                 <div class="code-footer">
                   <span class="status-dot"></span> Always a work in
