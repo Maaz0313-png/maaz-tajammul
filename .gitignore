@@ -1,5 +1,6 @@
 resume_data.json
 TODO.md
 node_modules/
-package-lock.json
 /.playwright-mcp
+
+/dist/

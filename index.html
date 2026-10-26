@@ -16,14 +16,14 @@
     />
     <meta property="og:type" content="website" />
     <link rel="icon" type="image/svg+xml" href="./assets/icons/monogram.svg" />
-    <link rel="stylesheet" href="./src/output.css" />
+    <link rel="stylesheet" href="./src/input.css" />
     <script>
       try {
         document.documentElement.dataset.theme =
           localStorage.getItem("theme") || "dark";
       } catch {}
     </script>
-    <script src="./src/app.js" defer></script>
+    <script type="module" src="./src/main.js"></script>
   </head>
   <body>
     <a class="skip-link" href="#content">Skip to content</a>
@@ -72,8 +72,16 @@
     <div class="app-shell">
       <aside id="sidebar" class="sidebar" aria-label="Workspace explorer">
         <div class="sidebar-heading">EXPLORER <span>···</span></div>
-        <div class="folder-name"><span>⌄</span> maaz-tajammul</div>
-        <nav class="file-nav" aria-label="Portfolio pages">
+        <button
+          class="folder-name"
+          id="workspace-toggle"
+          type="button"
+          aria-expanded="true"
+          aria-controls="workspace-files"
+        >
+          <span aria-hidden="true">⌄</span> maaz-tajammul
+        </button>
+        <nav class="file-nav" id="workspace-files" aria-label="Portfolio pages">
           <a href="#home" data-route="home" aria-current="page"
             ><span class="file-icon green">⌂</span> overview.jsx
             <span class="file-status">●</span></a
@@ -91,10 +99,34 @@
         <div class="sidebar-rule"></div>
         <p class="sidebar-heading">THE STACK</p>
         <div class="stack-list">
-          <span><i class="stack-dot blue"></i> React</span
-          ><span><i class="stack-dot purple"></i> Inertia.js</span
-          ><span><i class="stack-dot red"></i> Laravel</span
-          ><span><i class="stack-dot cyan"></i> Tailwind CSS</span>
+          <a
+            href="https://react.dev/learn"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="stack-dot blue" aria-hidden="true"></i> React
+            <span aria-hidden="true">↗</span></a
+          >
+          <a
+            href="https://inertiajs.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="stack-dot purple" aria-hidden="true"></i> Inertia.js
+            <span aria-hidden="true">↗</span></a
+          >
+          <a
+            href="https://laravel.com/docs"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="stack-dot red" aria-hidden="true"></i> Laravel
+            <span aria-hidden="true">↗</span></a
+          >
+          <a
+            href="https://tailwindcss.com/docs"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="stack-dot cyan" aria-hidden="true"></i> Tailwind CSS
+            <span aria-hidden="true">↗</span></a
+          >
         </div>
         <div class="sidebar-bottom">
           <div class="location-icon">↗</div>
@@ -455,66 +487,21 @@
             <div class="page-heading">
               <p class="eyebrow">UNDER THE HOOD / INTERACTIVE MODEL</p>
               <h1 id="stack-heading">
-                One app.<br />Connected thinking<span class="green">.</span>
+                A request.<br />The whole round trip<span class="green">.</span>
               </h1>
               <p>
-                A visual model of a typical Inertia visit: Laravel handles the
-                request, Inertia carries page props, and React updates the
-                interface.
+                Follow one click from the browser to Laravel and back. See what
+                travels over the network, where your data comes from, and how
+                React turns the response into a page.
               </p>
             </div>
-            <div class="bento architecture-panel">
-              <div class="panel-top">
-                <span class="mini-label">REQUEST LIFECYCLE</span
-                ><span class="simulation-label"
-                  >SIMULATION · NO BACKEND REQUEST</span
-                >
-              </div>
-              <div class="architecture-flow">
-                <div class="flow-node" data-step="0">
-                  <span class="flow-number">01 / REQUEST</span
-                  ><strong class="red">L</strong>
-                  <h3>Laravel</h3>
-                  <p>Route → controller → data</p>
-                </div>
-                <span class="flow-arrow">→</span>
-                <div class="flow-node" data-step="1">
-                  <span class="flow-number">02 / BRIDGE</span
-                  ><strong class="purple">I</strong>
-                  <h3>Inertia</h3>
-                  <p>Page component + props</p>
-                </div>
-                <span class="flow-arrow">→</span>
-                <div class="flow-node" data-step="2">
-                  <span class="flow-number">03 / RENDER</span
-                  ><strong class="blue">R</strong>
-                  <h3>React</h3>
-                  <p>Update the page component</p>
-                </div>
-                <span class="flow-arrow">→</span>
-                <div class="flow-node" data-step="3">
-                  <span class="flow-number">04 / INTERFACE</span
-                  ><strong class="cyan">T</strong>
-                  <h3>Tailwind</h3>
-                  <p>Style the rendered UI</p>
-                </div>
-              </div>
-              <div class="simulation-controls">
-                <button id="run-flow" class="button primary">
-                  Run a visit <span>▶</span></button
-                ><button id="reset-flow" class="button secondary">Reset</button>
-                <p id="flow-status" role="status" aria-live="polite">
-                  Ready. Follow the request through the stack.
-                </p>
-              </div>
-              <div class="props-preview">
-                <span class="mini-label">ILLUSTRATIVE PAGE PAYLOAD</span>
-                <pre><code>{
-  <span class="purple">"component"</span>: <span class="green">"Projects/Index"</span>,
-  <span class="purple">"props"</span>: { <span class="purple">"projects"</span>: [<span class="muted">/* server data */</span>] },
-  <span class="purple">"url"</span>: <span class="green">"/projects"</span>
-}</code></pre>
-              </div>
+            <div
+              id="architecture-demo"
+              aria-label="Interactive RILT request lifecycle"
+            >
+              <p class="bento" role="status">
+                Loading the interactive request lifecycle…
+              </p>
             </div>
             <div class="about-grid architecture-notes">
               <article class="bento">
@@ -531,9 +518,9 @@
                 <span class="mini-label">A NOTE ON IMPLEMENTATION</span>
                 <h3>A model, with a clear boundary.</h3>
                 <p>
-                  This portfolio is static HTML, Tailwind CSS, and JavaScript.
-                  The explorer demonstrates persistent client state; the diagram
-                  explains RILT. A production Inertia application also needs a
+                  This portfolio uses a Vite build with a React + Motion
+                  lifecycle demo. The requests and data shown here are
+                  illustrative. A production Inertia application also needs a
                   running Laravel backend.
                 </p>
                 <a

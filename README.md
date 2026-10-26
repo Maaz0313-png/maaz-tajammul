@@ -1,42 +1,73 @@
 # Maaz Tajammul — Developer Workspace
 
-A personal portfolio built as an interactive IDE-inspired workspace. Static HTML,
-Tailwind CSS 4, and dependency-free JavaScript; deployable to Vercel without a backend.
+An IDE-inspired personal portfolio. Vite builds the static workspace, Tailwind CSS,
+and a lazy-loaded React + Motion request-lifecycle lab. No PHP server is required.
 
-## Develop
+## Development and production preview
 
 ```sh
-npm install
+npm ci
+npm run dev
 npm run build
-npm run watch
+npm run preview
 ```
 
-Open `index.html` directly or serve the repository with a static web server.
-The checked-in `src/output.css` is generated from `src/input.css`.
+Use the HTTP URL printed by Vite. ES modules and lazy chunks require a server;
+opening index.html through file:// is no longer supported. Vercel runs npm run build
+and serves dist/ as configured in vercel.json. Generated files in dist/ are ignored.
+Imported project images and the shared logo/favicon receive content-hashed URLs.
 
-## Workspace features
+## Workspace
 
-- Hash-based file navigation with browser back/forward support.
-- Persistent session timer and Karachi clock; neither is a server uptime metric.
-- Ctrl/Cmd K command palette with search and keyboard selection.
-- Terminal: `help`, `home`, `projects`, `about`, `stack`, `contact`, `whoami`,
-  `theme`, `uptime`, and `clear`, plus command history via arrow keys.
+- Collapsible workspace folder with keyboard support and a saved collapse state.
+- Official React, Inertia, Laravel, and Tailwind documentation links in the sidebar.
+- Hash-based file navigation with browser history support.
+- Persistent session timer and Karachi clock (not server uptime).
+- Ctrl/Cmd K command palette, keyboard search, and Escape dismissal.
+- Terminal: help, home, projects, about, stack, contact, whoami, theme, uptime, clear.
 - Project filters and project notes dialogs.
-- RILT request lifecycle simulation with reset and reduced-motion support.
-- Contact validation that prepares a mailto draft. No message is sent or stored by the site.
-- Dark/light themes with local persistence and an accessible mobile explorer.
-- Shared SVG monogram for the header and favicon.
+- Contact validation prepares an email draft; nothing is sent or stored by the site.
+- Dark/light themes and mobile explorer navigation.
 
-## Files
+## Request-lifecycle lab
 
-- `index.html`: workspace shell and page content.
-- `src/app.js`: interactions, routing, and project data.
-- `src/input.css`: design tokens, layout, and responsive styles.
-- `assets/icons/monogram.svg`: shared logo and favicon.
+The architecture.php workspace tab loads a React island on demand. The diagram
+shows two endpoints (browser and Laravel server), outgoing requests, server routing,
+a database query, response packaging, and the return trip into React.
 
-## Architecture boundary
+Compare an initial HTML visit with a later Inertia JSON visit. Play/pause, previous
+and next step, direct timeline selection, replay, reset, and speed controls work
+without replacing the portfolio shell. Playback pauses when navigating away or
+hiding the browser tab. Reduced-motion preferences disable traveling animations.
+Tailwind is shown as browser-side presentation, not a network step. Persistent
+layout state is explicitly an example of a configured Inertia persistent layout.
 
-The RILT diagram is an explanatory model. This portfolio does not run React,
-Inertia, or Laravel. Tailwind compiles the CSS. Client-side navigation preserves
-state in this document; it does not issue Inertia visits or backend requests.
-A real RILT migration would require Laravel hosting and server-side routes.
+All HTTP messages, data, and timings in the lab are illustrative. The site uses
+React for this demo but does not run Laravel or issue real Inertia requests.
+
+## Source
+
+- index.html — workspace shell and content.
+- src/app.js — portfolio navigation and interactions.
+- src/main.js — lazy demo loading and route visibility.
+- src/architecture.jsx — React lifecycle state machine and Motion animation.
+- src/input.css — design system, responsive layouts, and animation styles.
+- vite.config.mjs — React and Tailwind build integrations.
+- assets/icons/monogram.svg — shared logo and favicon.
+
+## Animation and protocol references
+
+The implementation follows the official documentation:
+
+- [Inertia protocol](https://inertiajs.com/the-protocol): initial HTML versus later
+  X-Inertia requests and JSON page objects.
+- [Inertia internals](https://inertiajs.com/how-it-works): intercepting links,
+  resolving page components, and updating browser history.
+- [Motion React animation](https://motion.dev/docs/react-animation): declarative
+  state transitions and AnimatePresence for changing page content.
+- [Motion accessibility](https://motion.dev/docs/react-accessibility): reduced
+  motion without removing the educational content.
+- [Motion layout animation](https://motion.dev/docs/react-layout-animations):
+  shared timeline indicator using transform-based layout animation.
+- [Vite static deployment](https://vite.dev/guide/static-deploy): production build
+  and preview, with static hosting on Vercel.

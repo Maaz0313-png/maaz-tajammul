@@ -1,3 +1,7 @@
+import pandaPreview from "../assets/images/pandapatronage.png";
+import hextersPreview from "../assets/images/hexters.png";
+import inventoryPreview from "../assets/images/ims-dashboard.png";
+
 (() => {
   "use strict";
   const $ = (selector, parent = document) => parent.querySelector(selector);
@@ -47,7 +51,7 @@
       title: "Panda Patronage",
       category: "Agency website",
       type: "web",
-      image: "pandapatronage.png",
+      image: pandaPreview,
       url: "https://pandapatronage.com",
       repo: "panda-patronage",
       stack: ["Laravel", "React", "Inertia.js"],
@@ -64,7 +68,7 @@
       title: "The Hexters",
       category: "Portfolio & CMS",
       type: "web",
-      image: "hexters.png",
+      image: hextersPreview,
       url: "https://thehexters.com",
       repo: "hexters-portfolio-mgt-sys",
       stack: ["Laravel", "React", "Inertia.js"],
@@ -82,7 +86,7 @@
       title: "Inventory Management",
       category: "Business application",
       type: "app",
-      image: "ims-dashboard.png",
+      image: inventoryPreview,
       url: "https://ims.thehexters.com",
       repo: "ims",
       stack: ["Laravel", "Blade", "MySQL"],
@@ -97,9 +101,31 @@
     },
   ];
   const projectCard = (project, index) =>
-    `<article class="project-card" data-project-type="${project.type}"><a class="project-media ${project.id}" href="${project.url}" target="_blank" rel="noopener noreferrer" aria-label="Visit ${project.title}"><span class="project-number">PROJECT / 0${index + 1}</span><img src="./assets/images/${project.image}" alt="${project.title} website preview" loading="lazy" width="1440" height="900"></a><div class="project-body"><span class="project-category">${project.category.toUpperCase()}</span><div class="project-title-line"><h3>${project.title}</h3><a href="${project.url}" target="_blank" rel="noopener noreferrer" aria-label="Visit ${project.title}">↗</a></div><p>${project.description}</p><div class="project-tags">${project.stack.map((tool) => `<span>${tool}</span>`).join("")}</div><div class="project-links"><button data-project="${project.id}">Project notes ↗</button><a href="https://github.com/Maaz0313-png/${project.repo}" target="_blank" rel="noopener noreferrer">Source code ↗</a></div></div></article>`;
+    `<article class="project-card" data-project-type="${project.type}"><a class="project-media ${project.id}" href="${project.url}" target="_blank" rel="noopener noreferrer" aria-label="Visit ${project.title}"><span class="project-number">PROJECT / 0${index + 1}</span><img src="${project.image}" alt="${project.title} website preview" loading="lazy" width="1440" height="900"></a><div class="project-body"><span class="project-category">${project.category.toUpperCase()}</span><div class="project-title-line"><h3>${project.title}</h3><a href="${project.url}" target="_blank" rel="noopener noreferrer" aria-label="Visit ${project.title}">↗</a></div><p>${project.description}</p><div class="project-tags">${project.stack.map((tool) => `<span>${tool}</span>`).join("")}</div><div class="project-links"><button data-project="${project.id}">Project notes ↗</button><a href="https://github.com/Maaz0313-png/${project.repo}" target="_blank" rel="noopener noreferrer">Source code ↗</a></div></div></article>`;
   $("#home-projects").innerHTML = projects.map(projectCard).join("");
   $("#all-projects").innerHTML = projects.map(projectCard).join("");
+  const workspaceToggle = $("#workspace-toggle");
+  const workspaceFiles = $("#workspace-files");
+  try {
+    workspaceFiles.hidden =
+      localStorage.getItem("workspace-collapsed") === "true";
+  } catch {}
+  const updateWorkspace = () =>
+    workspaceToggle.setAttribute(
+      "aria-expanded",
+      String(!workspaceFiles.hidden),
+    );
+  updateWorkspace();
+  workspaceToggle.addEventListener("click", () => {
+    workspaceFiles.hidden = !workspaceFiles.hidden;
+    updateWorkspace();
+    try {
+      localStorage.setItem(
+        "workspace-collapsed",
+        String(workspaceFiles.hidden),
+      );
+    } catch {}
+  });
   const sidebar = $("#sidebar");
   const menuToggle = $("#menu-toggle");
   const closeMenu = () => {
@@ -204,7 +230,7 @@
         (project) => project.id === button.dataset.project,
       );
       $("#project-detail-content").innerHTML =
-        `<span class="mini-label">PROJECT NOTES / ${project.category.toUpperCase()}</span><h2 id="project-dialog-title">${project.title}</h2><img src="./assets/images/${project.image}" alt="${project.title} preview"><h3>The focus</h3><p>${project.focus}</p><h3>The approach</h3><p>${project.approach}</p><h3>The takeaway</h3><p>${project.takeaway}</p><div class="project-tags">${project.stack.map((tool) => `<span>${tool}</span>`).join("")}</div><div class="project-links"><a class="green" href="${project.url}" target="_blank" rel="noopener noreferrer">Visit website ↗</a><a href="https://github.com/Maaz0313-png/${project.repo}" target="_blank" rel="noopener noreferrer">Source code ↗</a></div>`;
+        `<span class="mini-label">PROJECT NOTES / ${project.category.toUpperCase()}</span><h2 id="project-dialog-title">${project.title}</h2><img src="${project.image}" alt="${project.title} preview"><h3>The focus</h3><p>${project.focus}</p><h3>The approach</h3><p>${project.approach}</p><h3>The takeaway</h3><p>${project.takeaway}</p><div class="project-tags">${project.stack.map((tool) => `<span>${tool}</span>`).join("")}</div><div class="project-links"><a class="green" href="${project.url}" target="_blank" rel="noopener noreferrer">Visit website ↗</a><a href="https://github.com/Maaz0313-png/${project.repo}" target="_blank" rel="noopener noreferrer">Source code ↗</a></div>`;
       projectDialog.setAttribute("aria-labelledby", "project-dialog-title");
       projectDialog.showModal();
     }),
@@ -376,38 +402,6 @@
         $(".statusbar [data-open-terminal]").focus({ preventScroll: true });
       }
     }
-  });
-  let flowRun = 0;
-  const stages = [
-    "Laravel resolves the route, runs the controller, and prepares data.",
-    "Inertia returns the page component name and serialized props.",
-    "React updates the page component. Persistent layout state can remain mounted.",
-    "Tailwind classes style the rendered interface. The visit is complete.",
-  ];
-  const resetFlow = () => {
-    flowRun++;
-    $$(".flow-node").forEach((node) => node.classList.remove("is-active"));
-    $("#run-flow").disabled = false;
-    $("#flow-status").textContent =
-      "Ready. Follow the request through the stack.";
-  };
-  $("#reset-flow").addEventListener("click", resetFlow);
-  $("#run-flow").addEventListener("click", async () => {
-    const run = ++flowRun;
-    $("#run-flow").disabled = true;
-    $$(".flow-node").forEach((node) => node.classList.remove("is-active"));
-    const delay = matchMedia("(prefers-reduced-motion: reduce)").matches
-      ? 100
-      : 850;
-    for (let index = 0; index < stages.length; index++) {
-      if (run !== flowRun) return;
-      $$(".flow-node").forEach((node, nodeIndex) =>
-        node.classList.toggle("is-active", nodeIndex === index),
-      );
-      $("#flow-status").textContent = stages[index];
-      await new Promise((resolve) => setTimeout(resolve, delay));
-    }
-    if (run === flowRun) $("#run-flow").disabled = false;
   });
   const form = $("#contact-form");
   const validateField = (field) => {
