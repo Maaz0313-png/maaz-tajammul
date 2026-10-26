@@ -355,8 +355,12 @@ export function ArchitectureDemo({ active }) {
                       ) : initial ? (
                         <div className="browser-waiting">
                           <span>⌘</span>
-                          <h3>Waiting for the document</h3>
-                          <p>React hasn’t booted yet.</p>
+                          <h3>Simulated browser</h3>
+                          <p>
+                            {step < 5
+                              ? "Waiting for the initial HTML response."
+                              : "HTML response arriving. React mounts in step 07."}
+                          </p>
                         </div>
                       ) : (
                         <>
