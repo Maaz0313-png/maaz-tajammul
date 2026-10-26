@@ -1,6 +1,6 @@
-import pandaPreview from "../assets/images/pandapatronage.png";
-import hextersPreview from "../assets/images/hexters.png";
-import inventoryPreview from "../assets/images/ims-dashboard.png";
+import pandaPreview from "../assets/images/pandapatronage-preview.webp";
+import hextersPreview from "../assets/images/hexters-preview.webp";
+import inventoryPreview from "../assets/images/ims-dashboard-preview.webp";
 
 (() => {
   "use strict";
@@ -52,7 +52,9 @@ import inventoryPreview from "../assets/images/ims-dashboard.png";
       category: "Agency website",
       type: "web",
       image: pandaPreview,
+      imageHeight: 6370,
       url: "https://pandapatronage.com",
+      live: false,
       repo: "panda-patronage",
       stack: ["Laravel", "React", "Inertia.js"],
       description: "A home for a digital agency’s services, work, and story.",
@@ -69,7 +71,9 @@ import inventoryPreview from "../assets/images/ims-dashboard.png";
       category: "Portfolio & CMS",
       type: "web",
       image: hextersPreview,
+      imageHeight: 5150,
       url: "https://thehexters.com",
+      live: true,
       repo: "hexters-portfolio-mgt-sys",
       stack: ["Laravel", "React", "Inertia.js"],
       description:
@@ -87,7 +91,9 @@ import inventoryPreview from "../assets/images/ims-dashboard.png";
       category: "Business application",
       type: "app",
       image: inventoryPreview,
+      imageHeight: 1497,
       url: "https://ims.thehexters.com",
+      live: false,
       repo: "ims",
       stack: ["Laravel", "Blade", "MySQL"],
       description:
@@ -100,8 +106,27 @@ import inventoryPreview from "../assets/images/ims-dashboard.png";
         "A business application focused on the day-to-day workflows that sit behind a clear dashboard.",
     },
   ];
-  const projectCard = (project, index) =>
-    `<article class="project-card" data-project-type="${project.type}"><a class="project-media ${project.id}" href="${project.url}" target="_blank" rel="noopener noreferrer" aria-label="Visit ${project.title}"><span class="project-number">PROJECT / 0${index + 1}</span><img src="${project.image}" alt="${project.title} website preview" loading="lazy" width="1440" height="900"></a><div class="project-body"><span class="project-category">${project.category.toUpperCase()}</span><div class="project-title-line"><h3>${project.title}</h3><a href="${project.url}" target="_blank" rel="noopener noreferrer" aria-label="Visit ${project.title}">↗</a></div><p>${project.description}</p><div class="project-tags">${project.stack.map((tool) => `<span>${tool}</span>`).join("")}</div><div class="project-links"><button data-project="${project.id}">Project notes ↗</button><a href="https://github.com/Maaz0313-png/${project.repo}" target="_blank" rel="noopener noreferrer">Source code ↗</a></div></div></article>`;
+  const projectCard = (project, index) => {
+    const tag = project.live ? "a" : "button";
+    const target = project.live
+      ? `href="${project.url}" target="_blank" rel="noopener noreferrer" aria-label="Visit ${project.title}"`
+      : `type="button" data-project="${project.id}" aria-label="Open ${project.title} project preview"`;
+    return `<article class="project-card" data-project-type="${project.type}">
+      <${tag} class="project-media ${project.id}" ${target}>
+        <span class="project-number">SELECTED WORK / 0${index + 1}</span>
+        <img src="${project.image}" alt="${project.title} website preview" loading="lazy" width="1351" height="${project.imageHeight}" />
+        <span class="project-visit" aria-hidden="true">${project.live ? "↗" : "→"}</span>
+      </${tag}>
+      <div class="project-body">
+        <div class="project-category-row"><span class="project-category">${project.category}</span><span class="project-availability">${project.live ? "Live website" : "Archived preview"}</span></div>
+        <h3>${project.title}</h3>
+        <p>${project.description}</p>
+        <div class="project-purpose"><span>The focus</span><p>${project.focus}</p></div>
+        <div class="project-tags" aria-label="Technologies">${project.stack.map((tool) => `<span>${tool}</span>`).join("")}</div>
+        <div class="project-links"><button data-project="${project.id}" aria-label="Read project notes for ${project.title}">Project notes <span aria-hidden="true">→</span></button><a href="https://github.com/Maaz0313-png/${project.repo}" target="_blank" rel="noopener noreferrer" aria-label="View ${project.title} source code">Source code <span aria-hidden="true">↗</span></a></div>
+      </div>
+    </article>`;
+  };
   $("#home-projects").innerHTML = projects.map(projectCard).join("");
   $("#all-projects").innerHTML = projects.map(projectCard).join("");
   const workspaceToggle = $("#workspace-toggle");
@@ -128,28 +153,65 @@ import inventoryPreview from "../assets/images/ims-dashboard.png";
   });
   const sidebar = $("#sidebar");
   const menuToggle = $("#menu-toggle");
-  const closeMenu = () => {
+  const backdrop = $("#explorer-backdrop");
+  const content = $("#content");
+  const closeMenu = (restoreFocus = false) => {
     sidebar.classList.remove("is-open");
+    sidebar.removeAttribute("role");
+    sidebar.removeAttribute("aria-modal");
     menuToggle.setAttribute("aria-expanded", "false");
     menuToggle.setAttribute("aria-label", "Open file explorer");
+    backdrop.hidden = true;
+    $(".editor-shell").inert = false;
+    $$(".topbar a, .topbar button").forEach((control) => {
+      control.inert = false;
+    });
+    if (restoreFocus === true) menuToggle.focus();
+  };
+  const openMenu = () => {
+    sidebar.classList.add("is-open");
+    sidebar.setAttribute("role", "dialog");
+    sidebar.setAttribute("aria-modal", "true");
+    menuToggle.setAttribute("aria-expanded", "true");
+    menuToggle.setAttribute("aria-label", "Close file explorer");
+    backdrop.hidden = false;
+    $(".editor-shell").inert = true;
+    $$(".topbar a, .topbar button").forEach((control) => {
+      control.inert = control !== menuToggle;
+    });
+    $("#workspace-toggle").focus();
   };
   menuToggle.addEventListener("click", () => {
-    const open = sidebar.classList.toggle("is-open");
-    menuToggle.setAttribute("aria-expanded", String(open));
-    menuToggle.setAttribute(
-      "aria-label",
-      open ? "Close file explorer" : "Open file explorer",
-    );
+    if (sidebar.classList.contains("is-open")) closeMenu(true);
+    else openMenu();
   });
-  document.addEventListener("click", (event) => {
-    if (
-      sidebar.classList.contains("is-open") &&
-      !sidebar.contains(event.target) &&
-      !menuToggle.contains(event.target)
-    )
-      closeMenu();
-  });
+  backdrop.addEventListener("click", () => closeMenu(true));
+  $("#close-explorer").addEventListener("click", () => closeMenu(true));
   matchMedia("(min-width: 761px)").addEventListener("change", closeMenu);
+  document.addEventListener("keydown", (event) => {
+    if (event.key !== "Tab" || !sidebar.classList.contains("is-open")) return;
+    const focusable = $$("a[href], button", sidebar).filter(
+      (el) => el.getClientRects().length,
+    );
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus();
+    }
+  });
+  const scrollPositions = new Map();
+  $("[data-scroll-top]").addEventListener("click", () => {
+    content.scrollTo({
+      top: 0,
+      behavior: matchMedia("(prefers-reduced-motion: reduce)").matches
+        ? "auto"
+        : "smooth",
+    });
+  });
   let currentPage;
   const navigate = (initial = false) => {
     const hash = location.hash.slice(1);
@@ -162,6 +224,7 @@ import inventoryPreview from "../assets/images/ims-dashboard.png";
       closeMenu();
       return;
     }
+    if (currentPage) scrollPositions.set(currentPage, content.scrollTop);
     currentPage = page.id;
     $$("[data-view]").forEach((view) => {
       view.hidden = view.dataset.view !== page.id;
@@ -175,11 +238,25 @@ import inventoryPreview from "../assets/images/ims-dashboard.png";
     $("#path-name").textContent = page.id === "home" ? "overview" : page.id;
     document.title = `${page.label} — Maaz Tajammul`;
     closeMenu();
-    window.scrollTo(0, 0);
-    if (!initial) $("#content").focus({ preventScroll: true });
+    content.scrollTo(0, scrollPositions.get(page.id) || 0);
+    if (!initial) {
+      const heading = $(`#view-${page.id} h1`);
+      heading.tabIndex = -1;
+      heading.focus({ preventScroll: true });
+    }
   };
   window.addEventListener("hashchange", () => navigate());
   navigate(true);
+  $$(".file-nav a").forEach((link) =>
+    link.addEventListener("click", () => {
+      if (link.hash === location.hash) {
+        closeMenu();
+        const heading = $(`#view-${currentPage} h1`);
+        heading.tabIndex = -1;
+        heading.focus({ preventScroll: true });
+      }
+    }),
+  );
   // This clock lives outside the view containers and survives every file change.
   const startedAt = performance.now();
   const updateClocks = () => {
@@ -221,6 +298,14 @@ import inventoryPreview from "../assets/images/ims-dashboard.png";
           button.dataset.filter !== "all" &&
           card.dataset.projectType !== button.dataset.filter;
       });
+      const visible = $$("#all-projects .project-card").filter(
+        (card) => !card.hidden,
+      ).length;
+      $("#all-projects").classList.toggle("single-result", visible === 1);
+      $("#project-results").textContent =
+        button.dataset.filter === "all"
+          ? "Showing all 3 projects"
+          : `Showing ${visible} ${visible === 1 ? "project" : "projects"}`;
     }),
   );
   const projectDialog = $("#project-dialog");
@@ -230,7 +315,7 @@ import inventoryPreview from "../assets/images/ims-dashboard.png";
         (project) => project.id === button.dataset.project,
       );
       $("#project-detail-content").innerHTML =
-        `<span class="mini-label">PROJECT NOTES / ${project.category.toUpperCase()}</span><h2 id="project-dialog-title">${project.title}</h2><img src="${project.image}" alt="${project.title} preview"><h3>The focus</h3><p>${project.focus}</p><h3>The approach</h3><p>${project.approach}</p><h3>The takeaway</h3><p>${project.takeaway}</p><div class="project-tags">${project.stack.map((tool) => `<span>${tool}</span>`).join("")}</div><div class="project-links"><a class="green" href="${project.url}" target="_blank" rel="noopener noreferrer">Visit website ↗</a><a href="https://github.com/Maaz0313-png/${project.repo}" target="_blank" rel="noopener noreferrer">Source code ↗</a></div>`;
+        `<span class="mini-label">PROJECT NOTES / ${project.category.toUpperCase()}</span><h2 id="project-dialog-title">${project.title}</h2><img src="${project.image}" alt="${project.title} preview"><h3>The focus</h3><p>${project.focus}</p><h3>The approach</h3><p>${project.approach}</p><h3>The takeaway</h3><p>${project.takeaway}</p><div class="project-tags">${project.stack.map((tool) => `<span>${tool}</span>`).join("")}</div>${project.live ? "" : '<p class="archived-project-note">Archived project preview. The implementation is available on GitHub.</p>'}<div class="project-links">${project.live ? `<a class="green" href="${project.url}" target="_blank" rel="noopener noreferrer">Visit website ↗</a>` : ""}<a href="https://github.com/Maaz0313-png/${project.repo}" target="_blank" rel="noopener noreferrer">Source code ↗</a></div>`;
       projectDialog.setAttribute("aria-labelledby", "project-dialog-title");
       projectDialog.showModal();
     }),
@@ -264,10 +349,16 @@ import inventoryPreview from "../assets/images/ims-dashboard.png";
       ? matches
           .map(
             (page, index) =>
-              `<button class="${index === commandIndex ? "is-selected" : ""}" data-command-route="${page.id}"><span class="${page.color}">${page.icon}</span>${page.file}<span>${page.label}</span></button>`,
+              `<button id="command-option-${page.id}" role="option" aria-selected="${index === commandIndex}" tabindex="-1" class="${index === commandIndex ? "is-selected" : ""}" data-command-route="${page.id}"><span class="${page.color}">${page.icon}</span>${page.file}<span>${page.label}</span></button>`,
           )
           .join("")
       : '<p class="no-results">No files found. Try “projects” or “contact”.</p>';
+    if (matches.length)
+      search.setAttribute(
+        "aria-activedescendant",
+        `command-option-${matches[commandIndex].id}`,
+      );
+    else search.removeAttribute("aria-activedescendant");
     $$("[data-command-route]").forEach((button) =>
       button.addEventListener("click", () => {
         palette.close();
@@ -277,6 +368,7 @@ import inventoryPreview from "../assets/images/ims-dashboard.png";
   };
   const openPalette = () => {
     if (palette.open) return;
+    closeMenu(sidebar.classList.contains("is-open"));
     search.value = "";
     commandIndex = 0;
     renderCommands();
@@ -401,6 +493,15 @@ import inventoryPreview from "../assets/images/ims-dashboard.png";
         terminal.hidden = true;
         $(".statusbar [data-open-terminal]").focus({ preventScroll: true });
       }
+    }
+  });
+  $("#copy-email").addEventListener("click", async () => {
+    try {
+      await navigator.clipboard.writeText("maaztajammul63@gmail.com");
+      $("#copy-email-status").textContent = "Email address copied.";
+    } catch {
+      $("#copy-email-status").textContent =
+        "Copy is unavailable. You can select the email address above.";
     }
   });
   const form = $("#contact-form");

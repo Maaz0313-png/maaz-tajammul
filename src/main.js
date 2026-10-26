@@ -1,3 +1,4 @@
+import "./workspace.css";
 import "./app.js";
 
 let demoModule;

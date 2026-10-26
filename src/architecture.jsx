@@ -176,6 +176,7 @@ export function ArchitectureDemo({ active }) {
     getReducedMotion,
     () => true,
   );
+  const timelineRef = useRef(null);
   const initial = mode === "initial";
   const completed = step === steps.length - 1;
   const current = steps[step];
@@ -199,10 +200,21 @@ export function ArchitectureDemo({ active }) {
     }
     const timeout = setTimeout(
       () => setStep((value) => value + 1),
-      3400 / speed,
+      5500 / speed,
     );
     return () => clearTimeout(timeout);
   }, [playing, active, completed, step, speed]);
+  useEffect(() => {
+    const timeline = timelineRef.current;
+    const selected = timeline?.querySelector('[aria-current="step"]');
+    if (selected)
+      timeline.scrollTo({
+        left:
+          selected.offsetLeft -
+          (timeline.clientWidth - selected.offsetWidth) / 2,
+        behavior: reduced ? "auto" : "smooth",
+      });
+  }, [step, reduced]);
   const reset = () => {
     setPlaying(false);
     setStep(0);
@@ -244,12 +256,104 @@ export function ArchitectureDemo({ active }) {
             <i className="status-dot" /> ILLUSTRATIVE · NO LIVE REQUESTS
           </span>
         </div>
+        <div className="playback-bar">
+          <div className="playback-actions">
+            <button className="button primary" id="run-flow" onClick={play}>
+              {playing ? "Pause" : completed ? "Replay" : "Play walkthrough"}
+              <span aria-hidden="true">{playing ? "Ⅱ" : "▶"}</span>
+            </button>
+            <button
+              className="playback-icon"
+              onClick={() => selectStep(Math.max(0, step - 1))}
+              disabled={step === 0}
+              aria-label="Previous step"
+            >
+              ←
+            </button>
+            <button
+              className="playback-icon"
+              onClick={() => selectStep(Math.min(steps.length - 1, step + 1))}
+              disabled={completed}
+              aria-label="Next step"
+            >
+              →
+            </button>
+            <button
+              className="playback-icon reset-playback"
+              id="reset-flow"
+              onClick={reset}
+              aria-label="Reset walkthrough"
+            >
+              ↺
+            </button>
+          </div>
+          <label className="playback-speed">
+            Speed
+            <select
+              value={speed}
+              onChange={(event) => setSpeed(Number(event.target.value))}
+            >
+              <option value="0.5">0.5×</option>
+              <option value="1">1×</option>
+              <option value="2">2×</option>
+            </select>
+          </label>
+          <span className="step-counter">
+            STEP <strong>0{step + 1}</strong> / 07
+          </span>
+        </div>
+        <nav
+          ref={timelineRef}
+          className="step-timeline"
+          aria-label="Lifecycle steps"
+        >
+          {steps.map((item, index) => (
+            <button
+              key={item.short}
+              onClick={() => selectStep(index)}
+              aria-current={index === step ? "step" : undefined}
+              className={index < step ? "step-done" : ""}
+            >
+              <span>{index < step ? "✓" : `0${index + 1}`}</span>
+              {item.short}
+              {index === step && (
+                <motion.i
+                  layoutId="timeline-active"
+                  transition={{ type: "spring", stiffness: 350, damping: 35 }}
+                />
+              )}
+            </button>
+          ))}
+        </nav>
         <div className="lab-stage">
           <div className="lab-stage-top">
             <span className="mini-label">FOLLOW THE ROUND TRIP</span>
             <span className={`phase-badge phase-${current.owner}`}>
               {current.phase}
             </span>
+          </div>
+          <div className="step-narration">
+            <span className="mini-label">WHAT IS HAPPENING / 0{step + 1}</span>
+            <AnimatePresence mode="wait" initial={false}>
+              <motion.div
+                key={`${mode}-${step}`}
+                initial={{ opacity: 0, y: reduced ? 0 : 6 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.15 }}
+              >
+                <h2>{current.title}</h2>
+                <p id="flow-status" role="status" aria-live="polite">
+                  {initial ? current.initial : current.visit}
+                </p>
+              </motion.div>
+            </AnimatePresence>
+            {reduced && (
+              <p className="reduced-motion-note">
+                Reduced motion is on. Use the steps to explore without traveling
+                animations.
+              </p>
+            )}
           </div>
           <div className="roundtrip-grid">
             <motion.article
@@ -530,102 +634,44 @@ export function ArchitectureDemo({ active }) {
             <span className="tailwind-role-tag">PRESENTATION LAYER</span>
           </div>
         </div>
-        <div className="playback-bar">
-          <div className="playback-actions">
-            <button className="button primary" id="run-flow" onClick={play}>
-              {playing ? "Pause" : completed ? "Replay" : "Play walkthrough"}
-              <span aria-hidden="true">{playing ? "Ⅱ" : "▶"}</span>
-            </button>
-            <button
-              className="playback-icon"
-              onClick={() => selectStep(Math.max(0, step - 1))}
-              disabled={step === 0}
-              aria-label="Previous step"
-            >
-              ←
-            </button>
-            <button
-              className="playback-icon"
-              onClick={() => selectStep(Math.min(steps.length - 1, step + 1))}
-              disabled={completed}
-              aria-label="Next step"
-            >
-              →
-            </button>
-            <button
-              className="playback-icon reset-playback"
-              id="reset-flow"
-              onClick={reset}
-              aria-label="Reset walkthrough"
-            >
-              ↺
-            </button>
-          </div>
-          <label className="playback-speed">
-            Speed
-            <select
-              value={speed}
-              onChange={(event) => setSpeed(Number(event.target.value))}
-            >
-              <option value="0.5">0.5×</option>
-              <option value="1">1×</option>
-              <option value="2">2×</option>
-            </select>
-          </label>
-          <span className="step-counter">
-            STEP <strong>0{step + 1}</strong> / 07
-          </span>
-        </div>
-        <nav className="step-timeline" aria-label="Lifecycle steps">
-          {steps.map((item, index) => (
-            <button
-              key={item.short}
-              onClick={() => selectStep(index)}
-              aria-current={index === step ? "step" : undefined}
-              className={index < step ? "step-done" : ""}
-            >
-              <span>{index < step ? "✓" : `0${index + 1}`}</span>
-              {item.short}
-              {index === step && (
-                <motion.i
-                  layoutId="timeline-active"
-                  transition={{ type: "spring", stiffness: 350, damping: 35 }}
-                />
-              )}
-            </button>
-          ))}
-        </nav>
         <div className="explanation-grid">
-          <div className="step-narration">
-            <span className="mini-label">WHAT IS HAPPENING / 0{step + 1}</span>
-            <AnimatePresence mode="wait" initial={false}>
-              <motion.div
-                key={`${mode}-${step}`}
-                initial={{ opacity: 0, y: reduced ? 0 : 6 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.15 }}
-              >
-                <h2>{current.title}</h2>
-                <p id="flow-status" role="status" aria-live="polite">
-                  {initial ? current.initial : current.visit}
-                </p>
-              </motion.div>
-            </AnimatePresence>
-            <div className="learning-takeaway">
-              <span className="green">↳</span>
-              <p>
-                {initial
-                  ? "First visit: HTML → boot React → mount page."
-                  : "Later visit: request → JSON props → update React. No full document reload."}
-              </p>
-            </div>
-            {reduced && (
-              <p className="reduced-motion-note">
-                Reduced motion is on. Use the steps to explore without traveling
-                animations.
-              </p>
-            )}
+          <div className="request-summary">
+            <span className="mini-label">WHAT THIS VISIT CHANGES</span>
+            <h2>
+              {initial
+                ? "A fresh document. A new app."
+                : "A new page. The same app."}
+            </h2>
+            <dl>
+              <div>
+                <dt>Response</dt>
+                <dd>
+                  {initial
+                    ? "HTML with initial page data"
+                    : "JSON component name and props"}
+                </dd>
+              </div>
+              <div>
+                <dt>React</dt>
+                <dd>
+                  {initial
+                    ? "Mounts the initial page"
+                    : "Renders the new page component"}
+                </dd>
+              </div>
+              <div>
+                <dt>Layout</dt>
+                <dd>
+                  {initial
+                    ? "Starts a fresh app session"
+                    : "Can preserve a configured persistent layout"}
+                </dd>
+              </div>
+              <div>
+                <dt>Tailwind</dt>
+                <dd>Styles the output in the browser</dd>
+              </div>
+            </dl>
           </div>
           <div className="payload-inspector">
             <div className="inspector-header">

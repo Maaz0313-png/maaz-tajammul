@@ -37,7 +37,7 @@
         /><span>MT</span></a
       >
       <div class="window-title">
-        PERSONAL WORKSPACE <span>/</span> PORTFOLIO v2.0
+        MAAZ TAJAMMUL <span>/</span> FULL STACK DEVELOPER
       </div>
       <div class="top-actions">
         <button
@@ -69,9 +69,25 @@
         </button>
       </div>
     </header>
+    <button
+      id="explorer-backdrop"
+      class="explorer-backdrop"
+      tabindex="-1"
+      aria-hidden="true"
+      hidden
+    ></button>
     <div class="app-shell">
       <aside id="sidebar" class="sidebar" aria-label="Workspace explorer">
-        <div class="sidebar-heading">EXPLORER <span>···</span></div>
+        <div class="sidebar-heading">
+          EXPLORER
+          <button
+            id="close-explorer"
+            class="mobile-only"
+            aria-label="Close file explorer"
+          >
+            ×</button
+          ><span class="desktop-only" aria-hidden="true">···</span>
+        </div>
         <button
           class="folder-name"
           id="workspace-toggle"
@@ -83,17 +99,36 @@
         </button>
         <nav class="file-nav" id="workspace-files" aria-label="Portfolio pages">
           <a href="#home" data-route="home" aria-current="page"
-            ><span class="file-icon green">⌂</span> overview.jsx
-            <span class="file-status">●</span></a
-          ><a href="#projects" data-route="projects"
-            ><span class="file-icon purple">◇</span> projects.tsx
-            <span class="file-count">03</span></a
-          ><a href="#about" data-route="about"
-            ><span class="file-icon yellow">{ }</span> about.json</a
-          ><a href="#stack" data-route="stack"
-            ><span class="file-icon red">◈</span> architecture.php</a
-          ><a href="#contact" data-route="contact"
-            ><span class="file-icon blue">@</span> contact.tsx</a
+            ><span class="file-icon green" aria-hidden="true">⌂</span
+            ><span class="nav-copy"
+              ><strong>Overview</strong><small>overview.jsx</small></span
+            ></a
+          >
+          <a href="#projects" data-route="projects"
+            ><span class="file-icon purple" aria-hidden="true">◇</span
+            ><span class="nav-copy"
+              ><strong>Selected work</strong><small>projects.tsx</small></span
+            ><span class="file-count" aria-hidden="true">03</span></a
+          >
+          <a href="#about" data-route="about"
+            ><span class="file-icon yellow" aria-hidden="true">{ }</span
+            ><span class="nav-copy"
+              ><strong>About &amp; experience</strong
+              ><small>about.json</small></span
+            ></a
+          >
+          <a href="#stack" data-route="stack"
+            ><span class="file-icon red" aria-hidden="true">◈</span
+            ><span class="nav-copy"
+              ><strong>Architecture</strong
+              ><small>architecture.php</small></span
+            ></a
+          >
+          <a href="#contact" data-route="contact"
+            ><span class="file-icon blue" aria-hidden="true">@</span
+            ><span class="nav-copy"
+              ><strong>Get in touch</strong><small>contact.tsx</small></span
+            ></a
           >
         </nav>
         <div class="sidebar-rule"></div>
@@ -165,7 +200,7 @@
             <span class="status-dot"></span
             ><time id="karachi-clock">PKT · UTC+05:00</time>
           </div>
-          <a href="#contact">Have something in mind? ↗</a>
+          <a href="#contact">Let’s build something ↗</a>
         </div>
       </aside>
       <div class="editor-shell">
@@ -198,29 +233,29 @@
             <div class="hero-grid">
               <div class="hero-copy">
                 <p class="eyebrow">
-                  <span class="status-dot"></span> FULL STACK DEVELOPER
+                  <span class="status-dot"></span> MAAZ TAJAMMUL / FULL STACK
+                  DEVELOPER
                 </p>
                 <h1 id="home-heading">
-                  Full stack thinking.<br /><span class="hero-soft"
-                    >Every little</span
-                  ><br /><span class="green">detail covered.</span
-                  ><span class="cursor-block" aria-hidden="true"></span>
+                  Laravel logic.<br /><span class="green"
+                    >React interfaces.</span
+                  >
                 </h1>
                 <p class="hero-description">
-                  Hey, I’m <strong>Maaz Tajammul.</strong> I connect the dots
-                  between solid backends and interfaces that feel right. Mostly
-                  with Laravel, React, and a healthy curiosity.
+                  I’m a full stack developer in Karachi. I build websites,
+                  content tools, and business applications with
+                  <strong>React, Inertia.js, Laravel, and Tailwind CSS.</strong>
                 </p>
                 <div class="hero-actions">
                   <a class="button primary" href="#projects"
-                    >Explore my work <span>↗</span></a
+                    >View selected work <span aria-hidden="true">↗</span></a
                   ><a class="button secondary" href="#contact"
-                    >Let’s talk <span>→</span></a
+                    >Get in touch <span aria-hidden="true">→</span></a
                   >
                 </div>
                 <div class="hero-footnote">
-                  <span>BASED IN KARACHI, PK</span
-                  ><span>BACKEND LOGIC. FRONTEND FEEL.</span>
+                  <span>Karachi, Pakistan</span
+                  ><span>Software Engineer at Zafwah Technologies</span>
                 </div>
               </div>
               <div class="code-window">
@@ -249,32 +284,73 @@
                   <span class="status-dot"></span> Always a work in
                   progress.<span>UTF-8</span>
                 </div>
-                <div class="code-sticker">
-                  <span>LESS MAGIC.</span><strong>More craft.</strong
-                  ><span class="sticker-spark">✳</span>
+                <div
+                  class="code-rail"
+                  aria-label="React, Inertia, Laravel, and Tailwind"
+                >
+                  <img
+                    src="./assets/icons/skills/react.svg"
+                    width="20"
+                    height="20"
+                    alt="React"
+                  />
+                  <img
+                    src="./assets/icons/skills/inertia.svg"
+                    width="20"
+                    height="20"
+                    alt="Inertia"
+                  />
+                  <img
+                    src="./assets/icons/skills/laravel.svg"
+                    width="20"
+                    height="20"
+                    alt="Laravel"
+                  />
+                  <img
+                    src="./assets/icons/skills/tailwindcss.svg"
+                    width="20"
+                    height="20"
+                    alt="Tailwind"
+                  />
+                  <span>One connected stack.</span>
                 </div>
               </div>
             </div>
             <div class="bento-grid">
               <article class="bento stack-bento">
                 <div class="panel-top">
-                  <span class="mini-label">MY HOME TURF</span><span>↗</span>
+                  <span class="mini-label">THE RILT STACK</span
+                  ><span class="green" aria-hidden="true">{ }</span>
                 </div>
-                <div class="rilt-letters">
-                  <span class="blue">R</span><span class="purple">I</span
-                  ><span class="red">L</span><span class="cyan">T</span>
-                </div>
-                <div class="panel-bottom">
-                  <p>Four tools. One connected experience.</p>
-                  <a href="#stack">See how it fits together →</a>
-                </div>
+                <h2>Clear responsibilities.<br />Connected by Inertia.</h2>
+                <ul class="stack-responsibilities">
+                  <li>
+                    <span class="blue">React</span
+                    ><span>Components &amp; interaction</span>
+                  </li>
+                  <li>
+                    <span class="purple">Inertia.js</span
+                    ><span>Page data &amp; navigation</span>
+                  </li>
+                  <li>
+                    <span class="red">Laravel</span
+                    ><span>Routes, logic &amp; data</span>
+                  </li>
+                  <li>
+                    <span class="cyan">Tailwind CSS</span
+                    ><span>Interface styling</span>
+                  </li>
+                </ul>
+                <a class="text-link" href="#stack"
+                  >Explore the architecture <span aria-hidden="true">→</span></a
+                >
               </article>
               <article class="bento currently-bento">
                 <div class="panel-top">
                   <span class="mini-label">CURRENTLY BUILDING</span
                   ><span class="status-dot"></span>
                 </div>
-                <h2>Good software.<br />Better every day.</h2>
+                <h2>Software Engineer.<br />Always learning.</h2>
                 <p>
                   Software Engineer at
                   <strong>Zafwah Technologies.</strong> Websites, Shopify
@@ -289,7 +365,7 @@
               </article>
               <article class="bento interactive-bento">
                 <div class="panel-top">
-                  <span class="mini-label">NOT JUST A SCREENSHOT</span
+                  <span class="mini-label">INTERACTIVE WALKTHROUGH</span
                   ><span class="purple">⚡</span>
                 </div>
                 <div class="flow-mini" aria-hidden="true">
@@ -298,14 +374,14 @@
                 <h2>One request.<br />The whole stack.</h2>
                 <p>Step inside a RILT request cycle.</p>
                 <a class="text-link" href="#stack"
-                  >Run the interactive model ↗</a
+                  >Follow a request <span aria-hidden="true">↗</span></a
                 >
               </article>
             </div>
             <div class="section-heading">
               <div>
                 <p class="eyebrow">SELECTED WORK / 01—03</p>
-                <h2>Built to be used.</h2>
+                <h2>Selected work, in context.</h2>
               </div>
               <a class="text-link" href="#projects">All projects ↗</a>
             </div>
@@ -348,6 +424,9 @@
                 Applications
               </button>
             </div>
+            <p id="project-results" class="project-results" role="status">
+              Showing all 3 projects
+            </p>
             <div id="all-projects" class="project-grid expanded"></div>
           </section>
           <section
@@ -486,7 +565,7 @@
             <div class="about-grid architecture-notes">
               <article class="bento">
                 <span class="mini-label">TRY IT IN THIS WORKSPACE</span>
-                <h3>Watch the session timer.</h3>
+                <h3>Keep the workspace. Change the page.</h3>
                 <p>
                   Switch files in the explorer. The session timer keeps running
                   because navigation updates this page without reloading the
@@ -496,7 +575,7 @@
               </article>
               <article class="bento">
                 <span class="mini-label">A NOTE ON IMPLEMENTATION</span>
-                <h3>A model, with a clear boundary.</h3>
+                <h3>A working frontend. An illustrative backend.</h3>
                 <p>
                   This portfolio uses a Vite build with a React + Motion
                   lifecycle demo. The requests and data shown here are
@@ -572,7 +651,7 @@
                 ></textarea>
                 <p id="message-error" class="field-error"></p>
                 <button class="button primary" type="submit">
-                  Prepare email <span>↗</span>
+                  Open email draft <span aria-hidden="true">↗</span>
                 </button>
                 <p class="form-note">
                   Opens your email app with a draft. Nothing is sent or stored
@@ -581,14 +660,29 @@
                 <p id="form-status" role="status" aria-live="polite"></p>
               </form>
               <div class="contact-details">
-                <a
-                  class="bento contact-tile"
-                  href="mailto:maaztajammul63@gmail.com"
-                  ><span class="mini-label">THE DIRECT ROUTE</span
-                  ><span class="contact-symbol green">@</span>
+                <div class="bento contact-tile">
+                  <span class="mini-label">THE DIRECT ROUTE</span
+                  ><span class="contact-symbol green" aria-hidden="true"
+                    >@</span
+                  >
                   <h3>Email me</h3>
-                  <p>maaztajammul63@gmail.com ↗</p></a
-                >
+                  <a class="direct-email" href="mailto:maaztajammul63@gmail.com"
+                    >maaztajammul63@gmail.com
+                    <span aria-hidden="true">↗</span></a
+                  >
+                  <button
+                    id="copy-email"
+                    class="button secondary"
+                    type="button"
+                  >
+                    Copy email address <span aria-hidden="true">⧉</span>
+                  </button>
+                  <p
+                    id="copy-email-status"
+                    role="status"
+                    aria-live="polite"
+                  ></p>
+                </div>
                 <div class="bento">
                   <span class="mini-label">ELSEWHERE ON THE INTERNET</span>
                   <div class="social-list">
@@ -657,7 +751,9 @@
             ><span
               >Built with care. Always in progress.
               <span class="green">↗</span></span
-            >
+            ><button type="button" data-scroll-top>
+              Back to top <span aria-hidden="true">↑</span>
+            </button>
           </footer>
         </main>
         <section
@@ -697,24 +793,36 @@
         <div class="statusbar">
           <span>⑂ main <span class="muted">✓</span></span
           ><span class="statusbar-middle"
-            ><span class="status-dot"></span> All systems curious</span
+            ><span class="status-dot"></span> RILT developer workspace</span
           ><button data-open-terminal>⌘ Terminal</button><span>UTF-8</span
           ><span>Made in PK</span>
         </div>
       </div>
     </div>
-    <dialog id="command-palette" class="command-palette">
+    <dialog
+      id="command-palette"
+      class="command-palette"
+      aria-label="Quick navigation"
+    >
       <form method="dialog" class="palette-header">
         <span>⌕</span
         ><input
           id="command-search"
+          role="combobox"
+          aria-autocomplete="list"
+          aria-expanded="true"
+          aria-controls="command-results"
           aria-label="Search portfolio pages"
           placeholder="Where do you want to go?"
           autocomplete="off"
         /><button aria-label="Close command palette">Esc</button>
       </form>
       <p class="mini-label">JUMP TO FILE</p>
-      <div id="command-results"></div>
+      <div
+        id="command-results"
+        role="listbox"
+        aria-label="Portfolio pages"
+      ></div>
       <p class="palette-hint">↑ ↓ to move · Enter to open · Esc to close</p>
     </dialog>
     <dialog id="project-dialog" class="project-dialog">
