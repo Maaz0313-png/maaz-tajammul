@@ -1187,7 +1187,8 @@ main {
 }
 .social-list a {
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
   padding: 13px 0;
   border-bottom: 1px solid var(--line);
   font-size: 13px;
@@ -1196,6 +1197,19 @@ main {
   border: 0;
 }
 .social-list a span {
+  color: var(--green);
+  margin-left: auto;
+}
+.social-link-icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+html[data-theme="dark"] .social-github-icon {
+  filter: invert(1);
+}
+.social-phone-icon {
   color: var(--green);
 }
 .terminal {
