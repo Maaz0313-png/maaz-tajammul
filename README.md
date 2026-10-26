@@ -17,7 +17,15 @@ The site is implemented as a single-page experience in `index.html`.
 
 - HTML (single-page structure)
 - Tailwind CSS (compiled from `src/input.css` to `src/output.css`)
-- Font Awesome icons
+- Custom responsive CSS, system typography, and local project screenshots
+
+## Design
+
+The portfolio uses a warm paper palette, a brick-red accent, oversized typography,
+and an editorial layout. Selected work leads the page, followed by an introduction,
+experience, education, and direct contact links. Light and dark themes are available
+from the header; the selected theme is saved locally. Mobile navigation supports
+keyboard dismissal, and motion follows the visitor's reduced-motion preference.
 
 ## Local Development
 

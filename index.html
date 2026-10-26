@@ -1,496 +1,127 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-
+<html lang="en" data-theme="light">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Maaz Tajammul - Full Stack Laravel Developer</title>
-    <meta name="description"
-        content="Magnetic portfolio of Maaz Tajammul — Full Stack Laravel Developer building high-performance products for startups, brands, and teams." />
-    <meta property="og:title" content="Maaz Tajammul — Full Stack Laravel Developer" />
-    <meta property="og:description"
-        content="Creative portfolio showcasing Laravel, React, and product-focused engineering work." />
-    <meta property="og:type" content="website" />
-    <meta name="theme-color" content="#0b1020" />
-    <link rel="icon" href="./assets/icons/favicon.ico" />
-    <script>document.documentElement.classList.add('js');</script>
-
-    <link rel="stylesheet" href="./src/output.css" />
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maaz Tajammul — Full Stack Developer</title>
+  <meta name="description" content="Maaz Tajammul is a full stack developer in Karachi, Pakistan. Selected Laravel and React projects, experience, and a little about how I work." />
+  <meta property="og:title" content="Maaz Tajammul — Full Stack Developer" />
+  <meta property="og:description" content="Laravel, React, and the details in between. A developer’s portfolio, from Karachi." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#f5f3ed" />
+  <link rel="icon" href="./assets/icons/favicon.ico" />
+  <link rel="stylesheet" href="./src/output.css" />
+  <script>try { document.documentElement.dataset.theme = localStorage.getItem('theme') || 'light'; } catch {}</script>
 </head>
-
 <body>
-    <div class="noise-layer" aria-hidden="true"></div>
-    <div id="portfolio-cursor-glow" aria-hidden="true"></div>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container nav-shell">
+      <a href="#home" class="brand-mark" aria-label="Maaz Tajammul home">mt<span>✳</span></a>
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <a href="#projects">Selected work <span>03</span></a>
+        <a href="#about">About me</a>
+        <a href="#experience">Experience</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark theme">◐</button>
+        <a href="#contact" class="header-contact">Let’s talk <span aria-hidden="true">↗</span></a>
+        <button class="menu-toggle" id="mobile-menu-btn" type="button" aria-expanded="false" aria-controls="mobile-menu">Menu <span aria-hidden="true">+</span></button>
+      </div>
+    </div>
+    <nav class="mobile-menu container" id="mobile-menu" aria-label="Mobile navigation" hidden>
+      <a href="#projects">Selected work</a><a href="#about">About me</a><a href="#experience">Experience</a><a href="#contact">Let’s talk ↗</a>
+    </nav>
+  </header>
 
-    <header class="site-header">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <nav class="nav-shell" aria-label="Main Navigation">
-                <a href="#home" class="brand-mark">Maaz.</a>
-
-                <button id="mobile-menu-btn" class="icon-btn md:hidden" aria-label="Open menu" aria-expanded="false"
-                    aria-controls="mobile-menu">
-                    <img class="ui-icon" src="./assets/icons/ui/stackshare.svg" alt="" aria-hidden="true" />
-                </button>
-
-                <div class="hidden md:flex items-center gap-2">
-                    <a href="#about" class="nav-pill">About</a>
-                    <a href="#skills" class="nav-pill">Skills</a>
-                    <a href="#projects" class="nav-pill">Projects</a>
-                    <a href="#experience" class="nav-pill">Experience</a>
-                    <a href="#education" class="nav-pill">Education</a>
-                    <a href="#contact" class="nav-pill nav-pill-cta">Let’s Talk</a>
-                    <button id="theme-toggle" class="icon-btn" aria-label="Toggle theme">
-                        <img class="ui-icon" src="./assets/icons/ui/theme-dark-tailwind.svg" alt="" aria-hidden="true" />
-                    </button>
-                </div>
-            </nav>
-
-            <div id="mobile-menu" class="hidden md:hidden mt-3 mobile-panel">
-                <div class="grid gap-2">
-                    <a href="#about" class="mobile-link">About</a>
-                    <a href="#skills" class="mobile-link">Skills</a>
-                    <a href="#projects" class="mobile-link">Projects</a>
-                    <a href="#experience" class="mobile-link">Experience</a>
-                    <a href="#education" class="mobile-link">Education</a>
-                    <a href="#contact" class="mobile-link">Let’s Talk</a>
-                    <button id="theme-toggle-mobile" class="hover:cursor-pointer mobile-link text-left" type="button">
-                        <span class="inline-flex items-center gap-2">
-                            <img class="ui-icon" src="./assets/icons/ui/theme-dark-tailwind.svg" alt="" aria-hidden="true" />
-                            Toggle Theme
-                        </span>
-                    </button>
-                </div>
-            </div>
+  <main id="main">
+    <section id="home" class="hero container">
+      <div class="hero-topline"><p>FULL STACK DEVELOPER</p><p>KARACHI, PAKISTAN <span class="location-dot" aria-hidden="true"></span></p></div>
+      <h1>Maaz Tajammul<span class="name-period">.</span></h1>
+      <div class="hero-main">
+        <div class="hero-intro">
+          <p class="hero-statement">Thoughtful code.<br />Things that <em>work.</em></p>
+          <p class="hero-copy">I build websites and web applications with Laravel and React. From the database to the last little interaction — I like making the pieces fit.</p>
+          <a href="#projects" class="primary-link">Take a look at my work <span aria-hidden="true">↘</span></a>
         </div>
-    </header>
+        <aside class="desk-note" aria-label="What I’m working on">
+          <div class="note-top"><span class="note-pin" aria-hidden="true"></span><span>A NOTE FROM MY DESK</span><span aria-hidden="true">↗</span></div>
+          <p class="note-heading">Building. Learning.<br />Usually both.</p>
+          <p>Currently a Software Engineer at <strong>Zafwah Technologies</strong>, working on the company website and exploring Shopify, voice &amp; SMS integrations.</p>
+          <div class="note-bottom"><span class="status-dot" aria-hidden="true"></span> Laravel + React, mostly.</div>
+        </aside>
+      </div>
+      <div class="hero-bottom"><p>A developer who cares about the whole thing.</p><a href="https://github.com/Maaz0313-png" target="_blank" rel="noopener noreferrer">GitHub ↗</a><span class="scroll-hint">SCROLL TO EXPLORE ↓</span></div>
+    </section>
 
-    <main>
-        <section id="home" class="hero-wrap section-pad">
-            <div class="aurora" aria-hidden="true"></div>
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                <div class="grid lg:grid-cols-[1.1fr_0.9fr] gap-10 items-center">
-                    <div>
-                        <p class="eyebrow reveal">Full Stack Laravel Developer • Karachi, PK</p>
-                        <h1 class="hero-title reveal">
-                            Building <span class="gradient-text">memorable</span> digital products that win users and
-                            business.
-                        </h1>
-                        <p class="hero-copy reveal">
-                            I help teams and founders ship robust Laravel + React experiences with clean architecture,
-                            performance-first thinking, and design sensitivity.
-                        </p>
-
-                        <div class="mt-8 flex flex-wrap gap-3 reveal">
-                            <a href="#projects" class="btn-primary">
-                                <img class="ui-icon" src="./assets/icons/ui/apachespark.svg" alt="" aria-hidden="true" />
-                                Explore Projects
-                            </a>
-                            <a href="#contact" class="btn-ghost">
-                                <img class="ui-icon" src="./assets/icons/ui/telegram.svg" alt="" aria-hidden="true" />
-                                Start a Conversation
-                            </a>
-                        </div>
-
-                        <div class="mt-10 grid sm:grid-cols-3 gap-4 reveal">
-                            <article class="stat-card">
-                                <p class="stat-value">1.6+</p>
-                                <p class="stat-label">Years shipping products</p>
-                            </article>
-                            <article class="stat-card">
-                                <p class="stat-value">15+</p>
-                                <p class="stat-label">Production-ready features</p>
-                            </article>
-                            <article class="stat-card">
-                                <p class="stat-value">100%</p>
-                                <p class="stat-label">Focus on quality delivery</p>
-                            </article>
-                        </div>
-                    </div>
-
-                    <aside class="hero-card reveal" aria-label="Professional Snapshot">
-                        <p class="text-sm uppercase tracking-[0.2em] text-slate-500/80 mb-4">Current Focus</p>
-                        <h2 class="text-2xl font-bold mb-4">Software Engineer @ Zafwah Technologies</h2>
-                        <p class="text-slate-500 leading-relaxed mb-6">
-                            Joined Zafwah Technologies in Feb 2026 after completing my tenure at Brandavio. Building the
-                            company website while learning and applying Shopify API, RoboCall API, and Branded SMS API
-                            solutions through h3techs.com.
-                        </p>
-
-                        <div class="chip-grid mb-6">
-                            <span class="skill-chip">Shopify API</span>
-                            <span class="skill-chip">RoboCall API</span>
-                            <span class="skill-chip">Branded SMS API</span>
-                            <span class="skill-chip">Laravel</span>
-                            <span class="skill-chip">React.js</span>
-                            <span class="skill-chip">Tailwind</span>
-                        </div>
-
-                        <div class="flex gap-3">
-                            <a href="https://github.com/Maaz0313-png" target="_blank" rel="noopener noreferrer" class="social-orb"
-                                aria-label="GitHub">
-                                <img class="si-icon" src="./assets/icons/social/github.svg" alt="GitHub" />
-                            </a>
-                            <a href="https://linkedin.com/in/maaz-tajammul-99ba661b2/" target="_blank"
-                                rel="noopener noreferrer" class="social-orb" aria-label="LinkedIn">
-                                <img class="si-icon" src="./assets/icons/social/linkedin.svg" alt="LinkedIn" />
-                            </a>
-                            <a href="https://wa.me/923133987079" target="_blank" rel="noopener noreferrer"
-                                class="social-orb" aria-label="WhatsApp">
-                                <img class="si-icon" src="./assets/icons/social/whatsapp.svg" alt="WhatsApp" />
-                            </a>
-                            <a href="mailto:maaztajammul63@gmail.com" class="social-orb" aria-label="Email">
-                                <img class="si-icon gmail-icon" src="./assets/icons/social/gmail.svg" alt="Email" />
-                            </a>
-                        </div>
-                    </aside>
-                </div>
-            </div>
-        </section>
-
-        <section id="about" class="section-pad">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="section-head reveal">
-                    <p class="eyebrow">About</p>
-                    <h2 class="section-title">Craft + Systems + Ownership</h2>
-                </div>
-
-                <div class="grid lg:grid-cols-2 gap-8">
-                    <article class="panel reveal">
-                        <p class="leading-relaxed text-lg text-slate-500/90">
-                            I’m a developer who blends product intuition with solid engineering. I care deeply about
-                            fast pages, clean APIs, and interfaces that feel alive. My approach is simple: understand
-                            the business goal, design the right architecture, and ship with precision.
-                        </p>
-                    </article>
-
-                    <article class="panel reveal">
-                        <div class="space-y-4">
-                            <div class="feature-row">
-                                <img class="feature-icon-img" src="./assets/icons/skills/speedtest.svg" alt="Delivery Velocity icon" />
-                                <div>
-                                    <h3>Delivery Velocity</h3>
-                                    <p>Move from concept to deployable features with clear milestones.</p>
-                                </div>
-                            </div>
-                            <div class="feature-row">
-                                <img class="feature-icon-img" src="./assets/icons/ui/stackshare.svg" alt="Scalable Foundations icon" />
-                                <div>
-                                    <h3>Scalable Foundations</h3>
-                                    <p>Architect systems that stay maintainable as products evolve.</p>
-                                </div>
-                            </div>
-                            <div class="feature-row">
-                                <img class="feature-icon-img" src="./assets/icons/ui/apachespark.svg" alt="Design-Driven Engineering icon" />
-                                <div>
-                                    <h3>Design-Driven Engineering</h3>
-                                    <p>Interfaces that feel premium while still being practical and fast.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section id="skills" class="section-pad">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="section-head reveal">
-                    <p class="eyebrow">Skill Matrix</p>
-                    <h2 class="section-title">Tools I trust in production</h2>
-                </div>
-
-                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 reveal">
-                    <div class="skill-tile"><img class="skill-logo" src="./assets/icons/skills/php.svg" alt="PHP logo" /><span>PHP</span></div>
-                    <div class="skill-tile"><img class="skill-logo" src="./assets/icons/skills/laravel.svg" alt="Laravel logo" /><span>Laravel</span></div>
-                    <div class="skill-tile"><img class="skill-logo" src="./assets/icons/skills/react.svg" alt="React logo" /><span>React</span></div>
-                    <div class="skill-tile"><img class="skill-logo" src="./assets/icons/skills/javascript.svg" alt="JavaScript logo" /><span>JavaScript</span></div>
-                    <div class="skill-tile"><img class="skill-logo" src="./assets/icons/skills/mysql.svg" alt="MySQL logo" /><span>MySQL</span></div>
-                    <div class="skill-tile"><img class="skill-logo" src="./assets/icons/skills/git.svg" alt="Git logo" /><span>Git</span></div>
-                    <div class="skill-tile"><img class="skill-logo github-logo" src="./assets/icons/skills/github.svg" alt="GitHub logo" /><span>GitHub</span></div>
-                    <div class="skill-tile"><img class="skill-logo" src="./assets/icons/skills/nodedotjs.svg" alt="Node.js logo" /><span>Node.js</span></div>
-                    <div class="skill-tile"><img class="skill-logo" src="./assets/icons/skills/inertia.svg" alt="Inertia.js logo" /><span>Inertia.js</span></div>
-                    <div class="skill-tile"><img class="skill-logo" src="./assets/icons/skills/tailwindcss.svg" alt="Tailwind CSS logo" /><span>Tailwind</span></div>
-                    <div class="skill-tile"><img class="skill-logo" src="./assets/icons/skills/openapiinitiative.svg" alt="API logo" /><span>REST APIs</span></div>
-                    <div class="skill-tile"><img class="skill-logo" src="./assets/icons/skills/speedtest.svg" alt="Optimization logo" /><span>Optimization</span></div>
-                </div>
-            </div>
-        </section>
-
-        <section id="projects" class="section-pad">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="section-head reveal">
-                    <p class="eyebrow">Selected Work</p>
-                    <h2 class="section-title">Products crafted for real users</h2>
-                </div>
-
-                <div class="project-stack">
-                    <article class="project-card reveal">
-                        <div class="project-media">
-                            <img src="./assets/images/pandapatronage.png" alt="Panda Patronage website preview" />
-                        </div>
-                        <div class="project-body">
-                            <p class="project-kicker">Agency Platform</p>
-                            <h3>Panda Patronage</h3>
-                            <p>Digital agency experience with conversion-focused pages, service storytelling, and
-                                polished visual rhythm.</p>
-                            <div class="tag-row"><span>Laravel</span><span>React</span><span>Inertia.js</span></div>
-                            <div class="link-row">
-                                <a href="https://pandapatronage.com" target="_blank" rel="noopener noreferrer"
-                                    class="link-btn">Live</a>
-                                <a href="https://github.com/Maaz0313-png/panda-patronage" target="_blank"
-                                    rel="noopener noreferrer" class="link-btn link-btn-alt">Code</a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="project-card reveal">
-                        <div class="project-media">
-                            <img src="./assets/images/hexters.png" alt="The Hexters website preview" />
-                        </div>
-                        <div class="project-body">
-                            <p class="project-kicker">Portfolio + CMS</p>
-                            <h3>The Hexters</h3>
-                            <p>Role-aware portfolio and blog ecosystem with strong SEO structure and editorial control.
-                            </p>
-                            <div class="tag-row"><span>Laravel</span><span>React</span><span>Inertia.js</span></div>
-                            <div class="link-row">
-                                <a href="https://thehexters.com" target="_blank" rel="noopener noreferrer"
-                                    class="link-btn">Live</a>
-                                <a href="https://github.com/Maaz0313-png/hexters-portfolio-mgt-sys" target="_blank"
-                                    rel="noopener noreferrer" class="link-btn link-btn-alt">Code</a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="project-card reveal">
-                        <div class="project-media">
-                            <img src="./assets/images/ims-dashboard.png" alt="Inventory Management dashboard preview" />
-                        </div>
-                        <div class="project-body">
-                            <p class="project-kicker">Operations System</p>
-                            <h3>Inventory Management System</h3>
-                            <p>Real-time stock workflows with analytics and role-based controls for daily business
-                                operations.</p>
-                            <div class="tag-row"><span>Laravel</span><span>Blade</span><span>MySQL</span></div>
-                            <div class="link-row">
-                                <a href="https://ims.thehexters.com" target="_blank" rel="noopener noreferrer"
-                                    class="link-btn">Live</a>
-                                <a href="https://github.com/Maaz0313-png/ims" target="_blank" rel="noopener noreferrer"
-                                    class="link-btn link-btn-alt">Code</a>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section id="experience" class="section-pad">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="section-head reveal">
-                    <p class="eyebrow">Experience</p>
-                    <h2 class="section-title">Building with teams, not just tech</h2>
-                </div>
-
-                <article class="panel reveal">
-                    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 mb-6">
-                        <h3 class="text-2xl font-bold">Software Engineer • Zafwah Technologies</h3>
-                        <p class="text-slate-500/85">Feb 2026 — Present · Karachi, Pakistan</p>
-                    </div>
-                    <ul class="timeline-list">
-                        <li>Started building Zafwah Technologies’ company website with production-focused architecture and UI quality.</li>
-                        <li>Learning and integrating Shopify API workflows for product, customer, and order-related capabilities.</li>
-                        <li>Learning RoboCall API services from h3techs.com for automated voice-call communication use cases.</li>
-                        <li>Learning Branded SMS API services from h3techs.com for branded transactional and campaign messaging.</li>
-                    </ul>
-                </article>
-
-                <article class="panel reveal mt-4">
-                    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 mb-6">
-                        <h3 class="text-2xl font-bold">Senior Full Stack PHP/Laravel Developer • Brandavio</h3>
-                        <p class="text-slate-500/85">Oct 2023 — Feb 2026 · Karachi, Pakistan</p>
-                    </div>
-                    <ul class="timeline-list">
-                        <li>Shipped production platforms in Laravel and React with measurable business impact.</li>
-                        <li>Improved maintainability through cleaner structure, reusable modules, and tighter standards.</li>
-                        <li>Worked closely with design and product teams to convert ideas into stable releases.</li>
-                        <li>Balanced delivery speed with robust architecture and long-term scalability.</li>
-                    </ul>
-                </article>
-            </div>
-        </section>
-
-        <section id="education" class="section-pad">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="section-head reveal">
-                    <p class="eyebrow">Education</p>
-                    <h2 class="section-title">Continuous growth mindset</h2>
-                </div>
-
-                <div class="grid md:grid-cols-2 gap-4 reveal">
-                    <article class="edu-card">
-                        <h3>BS Software Engineering</h3>
-                        <p>Virtual University of Pakistan</p>
-                        <span>2024 — Present</span>
-                    </article>
-                    <article class="edu-card">
-                        <h3>ACCP Prime</h3>
-                        <p>Aptech Computer Education</p>
-                        <span>2020 — 2024</span>
-                    </article>
-                    <article class="edu-card">
-                        <h3>Master Laravel (Udemy)</h3>
-                        <p>Piotr Jura</p>
-                        <span>2024</span>
-                    </article>
-                    <article class="edu-card">
-                        <h3>React.js For Beginners</h3>
-                        <p>upGrad Academy</p>
-                        <span>2024</span>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="section-pad pb-24">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="cta-shell reveal">
-                    <p class="eyebrow">Contact</p>
-                    <h2 class="section-title mb-4">Let’s create something remarkable</h2>
-                    <p class="max-w-2xl mx-auto text-slate-500/90 text-lg mb-8">
-                        Open for freelance projects and full-time opportunities. If your product deserves elegant
-                        engineering and standout execution, let’s connect.
-                    </p>
-
-                    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                        <a class="contact-block" href="mailto:maaztajammul63@gmail.com">
-                            <img class="si-icon contact-si-icon gmail-icon" src="./assets/icons/social/gmail.svg" alt="Email" />
-                            <span>Email</span>
-                            <small>maaztajammul63@gmail.com</small>
-                        </a>
-                        <a class="contact-block" href="tel:+923133987079">
-                            <img class="si-icon contact-si-icon" src="./assets/icons/social/aircall.svg" alt="Phone" />
-                            <span>Phone</span>
-                            <small>+92 313 3987079</small>
-                        </a>
-                        <a class="contact-block" href="https://wa.me/923133987079" target="_blank"
-                            rel="noopener noreferrer">
-                            <img class="si-icon contact-si-icon" src="./assets/icons/social/whatsapp.svg" alt="WhatsApp" />
-                            <span>WhatsApp</span>
-                            <small>Quick chat</small>
-                        </a>
-                        <a class="contact-block" href="https://linkedin.com/in/maaz-tajammul-99ba661b2/" target="_blank"
-                            rel="noopener noreferrer">
-                            <img class="si-icon contact-si-icon" src="./assets/icons/social/linkedin.svg" alt="LinkedIn" />
-                            <span>LinkedIn</span>
-                            <small>Professional profile</small>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="py-8 border-t border-white/10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between gap-2 text-sm text-slate-500">
-            <p>© <span id="year"></span> Maaz Tajammul. Crafted with intention.</p>
-            <p>Laravel • React • Tailwind • Performance-first builds</p>
+    <section id="projects" class="work-section section-space">
+      <div class="container">
+        <div class="section-heading"><div><p class="section-index">01 / SELECTED WORK</p><h2>A few things<br />I’ve put into the world<span class="accent">.</span></h2></div><p class="section-aside">Different problems. Same attention to detail.<br />A selection of my development work.</p></div>
+        <div class="project-grid">
+          <article class="project project-featured">
+            <a class="project-image panda-image" href="https://pandapatronage.com" target="_blank" rel="noopener noreferrer" aria-label="Visit Panda Patronage"><div class="image-topline"><span>PANDA PATRONAGE</span><span>WEB DEVELOPMENT / 01</span></div><img src="./assets/images/pandapatronage.png" alt="Panda Patronage agency website, showing its services and visual identity" width="1440" height="900" /><span class="image-visit" aria-hidden="true">↗</span></a>
+            <div class="project-info"><div><p class="project-category">AGENCY WEBSITE</p><h3>Panda Patronage</h3><p>A home for a digital agency’s services, work, and story. Built with Laravel, React, and Inertia.js.</p></div><a class="code-link" href="https://github.com/Maaz0313-png/panda-patronage" target="_blank" rel="noopener noreferrer" aria-label="View Panda Patronage source code">Source ↗</a></div>
+          </article>
+          <article class="project">
+            <a class="project-image hexters-image" href="https://thehexters.com" target="_blank" rel="noopener noreferrer" aria-label="Visit The Hexters"><div class="image-topline"><span>THE HEXTERS</span><span>02</span></div><img src="./assets/images/hexters.png" alt="The Hexters portfolio and content management website" loading="lazy" width="1440" height="900" /><span class="image-visit" aria-hidden="true">↗</span></a>
+            <div class="project-info"><div><p class="project-category">PORTFOLIO &amp; CMS</p><h3>The Hexters</h3><p>A portfolio and blog with role-based access, editorial tools, and SEO structure. Laravel + React + Inertia.js.</p></div><a class="code-link" href="https://github.com/Maaz0313-png/hexters-portfolio-mgt-sys" target="_blank" rel="noopener noreferrer" aria-label="View The Hexters source code">Source ↗</a></div>
+          </article>
+          <article class="project">
+            <a class="project-image ims-image" href="https://ims.thehexters.com" target="_blank" rel="noopener noreferrer" aria-label="Visit Inventory Management System"><div class="image-topline"><span>INVENTORY MANAGEMENT</span><span>03</span></div><img src="./assets/images/ims-dashboard.png" alt="Inventory management dashboard with stock and business analytics" loading="lazy" width="1440" height="900" /><span class="image-visit" aria-hidden="true">↗</span></a>
+            <div class="project-info"><div><p class="project-category">BUSINESS APPLICATION</p><h3>Inventory Management</h3><p>Stock tracking, analytics, and access controls for day-to-day operations. Built with Laravel, Blade, and MySQL.</p></div><a class="code-link" href="https://github.com/Maaz0313-png/ims" target="_blank" rel="noopener noreferrer" aria-label="View Inventory Management source code">Source ↗</a></div>
+          </article>
         </div>
-    </footer>
+      </div>
+    </section>
 
-    <script>
-        const root = document.documentElement;
-        const themeBtn = document.getElementById('theme-toggle');
-        const themeBtnMobile = document.getElementById('theme-toggle-mobile');
-        const mobileBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
+    <section id="about" class="about-section section-space container">
+      <div class="about-grid"><div><p class="section-index">02 / THE PERSON BEHIND THE CODE</p><h2>I like figuring<br />things <em>out.</em></h2><div class="personal-mark" aria-hidden="true">{<span>mt</span>}</div></div>
+        <div class="about-copy"><p class="large-copy">I’m Maaz, a full stack developer based in Karachi. I enjoy the point where a messy problem starts becoming a useful piece of software.</p><p>Most of my work lives in Laravel and React. I work across the stack: shaping databases, building APIs, and turning designs into interfaces people can actually use.</p><p>I care about code that the next developer can understand, pages that load quickly, and the small details that make a website feel considered. There’s always something new to figure out. That’s part of the appeal.</p>
+          <div id="skills" class="toolbox"><p class="section-index">MY EVERYDAY TOOLBOX</p><ul><li>Laravel</li><li>PHP</li><li>React</li><li>Inertia.js</li><li>JavaScript</li><li>MySQL</li><li>Tailwind CSS</li><li>Git</li><li>REST APIs</li><li>Node.js</li></ul></div>
+        </div>
+      </div>
+    </section>
 
-        const savedTheme = localStorage.getItem('theme') || 'dark';
-        root.setAttribute('data-theme', savedTheme);
+    <section id="experience" class="experience-section section-space">
+      <div class="container"><div class="section-heading"><div><p class="section-index">03 / ALONG THE WAY</p><h2>Where I’ve been<br />putting in the work.</h2></div><p class="section-aside">Teams I’ve worked with.<br />Things I’m still learning.</p></div>
+        <div class="experience-row"><p class="experience-date">FEB 2026 — PRESENT<span>Karachi, Pakistan</span></p><div><h3>Zafwah Technologies <span class="current-label">CURRENT</span></h3><p class="role">Software Engineer</p><p class="experience-description">Building the company website and working with Shopify API integrations. Exploring voice-call and branded SMS services through h3techs.com.</p></div><span class="row-number" aria-hidden="true">01</span></div>
+        <div class="experience-row"><p class="experience-date">OCT 2023 — FEB 2026<span>Karachi, Pakistan</span></p><div><h3>Brandavio</h3><p class="role">Senior Full Stack PHP / Laravel Developer</p><p class="experience-description">Built and maintained Laravel and React platforms. Worked with design and product teams on reusable features, maintainable architecture, and production releases.</p></div><span class="row-number" aria-hidden="true">02</span></div>
+        <div id="education" class="education-block"><p class="section-index">STILL A STUDENT, TOO.</p><div class="education-grid"><div><h3>BS Software Engineering</h3><p>Virtual University of Pakistan</p><span>2024 — Present</span></div><div><h3>ACCP Prime</h3><p>Aptech Computer Education</p><span>2020 — 2024</span></div><div><h3>A little extra learning</h3><p>Master Laravel · Piotr Jura, Udemy<br />React.js For Beginners · upGrad Academy</p><span>2024</span></div></div></div>
+      </div>
+    </section>
 
-        const setThemeIcon = () => {
-            const isLight = root.getAttribute('data-theme') === 'light';
-            if (themeBtn) {
-                themeBtn.innerHTML = `<img class="ui-icon" src="${isLight ? './assets/icons/ui/theme-light-tailwind.svg' : './assets/icons/ui/theme-dark-tailwind.svg'}" alt="" aria-hidden="true" />`;
-            }
-            if (themeBtnMobile) {
-                themeBtnMobile.innerHTML = `<span class="inline-flex items-center gap-2"><img class="ui-icon" src="${isLight ? './assets/icons/ui/theme-light-tailwind.svg' : './assets/icons/ui/theme-dark-tailwind.svg'}" alt="" aria-hidden="true" />Toggle Theme</span>`;
-            }
-        };
-
-        setThemeIcon();
-
-        const toggleTheme = () => {
-            const current = root.getAttribute('data-theme');
-            const next = current === 'light' ? 'dark' : 'light';
-            root.setAttribute('data-theme', next);
-            localStorage.setItem('theme', next);
-            setThemeIcon();
-        };
-
-        themeBtn?.addEventListener('click', toggleTheme);
-        themeBtnMobile?.addEventListener('click', toggleTheme);
-
-        mobileBtn?.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-            const expanded = mobileBtn.getAttribute('aria-expanded') === 'true';
-            mobileBtn.setAttribute('aria-expanded', String(!expanded));
-        });
-
-        document.querySelectorAll('#mobile-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-                mobileBtn?.setAttribute('aria-expanded', 'false');
-            });
-        });
-
-        const revealObserver = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('is-visible');
-                }
-            });
-        }, { threshold: 0.2, rootMargin: '0px 0px -10% 0px' });
-
-        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
-
-        const navLinks = document.querySelectorAll('.nav-pill[href^="#"]');
-        const sections = document.querySelectorAll('main section[id]');
-
-        const HEADER_OFFSET = 140;
-
-        const setActiveLink = () => {
-            let currentId = 'home';
-            sections.forEach((section) => {
-                if (window.scrollY >= section.offsetTop - HEADER_OFFSET) currentId = section.id;
-            });
-            navLinks.forEach(link => {
-                const isActive = link.getAttribute('href') === `#${currentId}`;
-                link.classList.toggle('is-active', isActive);
-            });
-        };
-
-        window.addEventListener('scroll', setActiveLink, { passive: true });
-        setActiveLink();
-
-        const cursorGlow = document.getElementById('portfolio-cursor-glow');
-        window.addEventListener('pointermove', (e) => {
-            cursorGlow.style.left = `${e.clientX}px`;
-            cursorGlow.style.top = `${e.clientY}px`;
-        });
-
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                const id = this.getAttribute('href');
-                const target = document.querySelector(id);
-                if (!target) return;
-                e.preventDefault();
-                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            });
-        });
-
-        document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
+    <section id="contact" class="contact-section container section-space">
+      <div class="contact-top"><p class="section-index">04 / YOUR NEXT GOOD IDEA</p><p>Open to projects &amp; conversations<span class="status-dot" aria-hidden="true"></span></p></div>
+      <a class="contact-title" href="mailto:maaztajammul63@gmail.com">Let’s make<br /><em>something useful.</em><span aria-hidden="true">↗</span></a>
+      <div class="contact-bottom"><a class="email-link" href="mailto:maaztajammul63@gmail.com">maaztajammul63@gmail.com ↗</a><div class="social-links"><a href="https://github.com/Maaz0313-png" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="https://linkedin.com/in/maaz-tajammul-99ba661b2/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="https://wa.me/923133987079" target="_blank" rel="noopener noreferrer">WhatsApp ↗</a><a href="tel:+923133987079">Call ↗</a></div></div>
+    </section>
+  </main>
+  <footer class="container site-footer"><p>© <span id="year">2026</span> Maaz Tajammul</p><p>Made with care, in Karachi.</p><a href="#home">BACK TO TOP ↑</a></footer>
+  <script>
+    const root = document.documentElement;
+    const themeButton = document.getElementById('theme-toggle');
+    const menuButton = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    const updateThemeLabel = () => {
+      const dark = root.dataset.theme === 'dark';
+      themeButton.setAttribute('aria-label', `Switch to ${dark ? 'light' : 'dark'} theme`);
+      document.querySelector('meta[name="theme-color"]').content = dark ? '#20211e' : '#f5f3ed';
+    };
+    updateThemeLabel();
+    themeButton.addEventListener('click', () => {
+      root.dataset.theme = root.dataset.theme === 'dark' ? 'light' : 'dark';
+      try { localStorage.setItem('theme', root.dataset.theme); } catch {}
+      updateThemeLabel();
+    });
+    const closeMenu = () => { menu.hidden = true; menuButton.setAttribute('aria-expanded', 'false'); };
+    menuButton.addEventListener('click', () => {
+      menu.hidden = !menu.hidden;
+      menuButton.setAttribute('aria-expanded', String(!menu.hidden));
+    });
+    menu.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
+    document.addEventListener('keydown', event => { if (event.key === 'Escape') { const wasOpen = !menu.hidden; closeMenu(); if (wasOpen) menuButton.focus(); } });
+    matchMedia('(min-width: 761px)').addEventListener('change', event => { if (event.matches) closeMenu(); });
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
-
 </html>
