@@ -44,7 +44,7 @@ body {
   background: var(--bg);
   color: var(--text);
   font-family: Inter, "Segoe UI", Arial, sans-serif;
-  font-size: 14px;
+  font-size: 1rem;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
@@ -141,7 +141,7 @@ button {
   display: flex;
   align-items: center;
   gap: 11px;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 650;
   letter-spacing: -0.7px;
   min-width: 185px;
@@ -175,7 +175,7 @@ kbd {
   font-family: "Cascadia Code", "SFMono-Regular", Consolas, monospace;
 }
 .window-title {
-  font-size: 10px;
+  font-size: 0.875rem;
   letter-spacing: 1.4px;
   color: var(--muted);
 }
@@ -197,12 +197,12 @@ kbd {
   border: 1px solid var(--line);
   padding: 6px 10px;
   color: var(--muted);
-  font-size: 12px;
+  font-size: 0.875rem;
   border-radius: 6px;
 }
 .palette-trigger kbd {
   margin-left: 26px;
-  font-size: 9px;
+  font-size: 0.875rem;
   border: 1px solid var(--line);
   padding: 0 4px;
   border-radius: 3px;
@@ -212,11 +212,11 @@ kbd {
   height: 36px;
   display: grid;
   place-items: center;
-  font-size: 21px;
+  font-size: 1.3125rem;
   color: var(--muted);
 }
 .github-top {
-  font-size: 12px;
+  font-size: 0.875rem;
 }
 .mobile-only {
   display: none;
@@ -242,7 +242,7 @@ kbd {
   flex-shrink: 0;
 }
 .sidebar-heading {
-  font-size: 10px;
+  font-size: 0.875rem;
   letter-spacing: 1.5px;
   padding: 0 22px;
   color: var(--muted);
@@ -250,12 +250,12 @@ kbd {
   justify-content: space-between;
 }
 .sidebar-heading > span {
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 1;
 }
 .folder-name {
   padding: 24px 18px 13px;
-  font-size: 11px;
+  font-size: 0.875rem;
   color: var(--text);
 }
 .folder-name > span {
@@ -266,7 +266,7 @@ kbd {
   align-items: center;
   gap: 10px;
   padding: 11px 18px;
-  font-size: 11px;
+  font-size: 0.875rem;
   color: var(--muted);
   border-left: 2px solid transparent;
 }
@@ -281,17 +281,17 @@ kbd {
 .file-icon {
   width: 18px;
   text-align: center;
-  font-size: 14px;
+  font-size: 1rem;
 }
 .file-status,
 .file-count {
   margin-left: auto;
-  font-size: 8px;
+  font-size: 0.875rem;
   color: var(--green);
 }
 .file-count {
   color: var(--muted);
-  font-size: 9px;
+  font-size: 0.875rem;
 }
 .sidebar-rule {
   height: 1px;
@@ -301,7 +301,7 @@ kbd {
 .stack-list {
   display: grid;
   gap: 13px;
-  font-size: 11px;
+  font-size: 0.875rem;
   color: var(--muted);
   padding: 20px 24px;
 }
@@ -325,23 +325,23 @@ kbd {
   flex-direction: column;
 }
 .location-icon {
-  font-size: 24px;
+  font-size: 1.5rem;
   color: var(--green);
   line-height: 1;
   margin-bottom: 11px;
 }
 .sidebar-bottom strong {
-  font-size: 12px;
+  font-size: 0.875rem;
   font-weight: 500;
 }
 .sidebar-bottom > span {
-  font-size: 10px;
+  font-size: 0.875rem;
   color: var(--muted);
   margin-top: 4px;
 }
 .local-time {
   font-family: Consolas, monospace;
-  font-size: 9px;
+  font-size: 0.875rem;
   color: var(--muted);
   display: flex;
   align-items: center;
@@ -350,7 +350,7 @@ kbd {
 }
 .sidebar-bottom > a {
   color: var(--green);
-  font-size: 10px;
+  font-size: 0.875rem;
   margin-top: 23px;
 }
 .status-dot {
@@ -385,7 +385,7 @@ kbd {
   gap: 12px;
   padding: 0 20px;
   font-family: Consolas, monospace;
-  font-size: 11px;
+  font-size: 0.875rem;
 }
 .tab-dot {
   width: 5px;
@@ -396,15 +396,15 @@ kbd {
 }
 .tab-close {
   color: var(--muted);
-  font-size: 16px;
+  font-size: 1rem;
 }
 .tab-path {
-  font-size: 9px;
+  font-size: 0.875rem;
   color: var(--muted);
   margin-left: 22px;
 }
 .session {
-  font-size: 9px;
+  font-size: 0.875rem;
   color: var(--muted);
   display: flex;
   align-items: center;
@@ -427,7 +427,7 @@ main {
   padding-bottom: 46px;
 }
 .breadcrumb {
-  font-size: 10px;
+  font-size: 0.875rem;
   color: var(--muted);
   padding: 24px 0 30px;
   display: flex;
@@ -444,7 +444,7 @@ main {
   padding: 20px 0 46px;
 }
 .eyebrow {
-  font-size: 9px;
+  font-size: 0.875rem;
   letter-spacing: 1.5px;
   color: var(--muted);
   display: flex;
@@ -452,7 +452,7 @@ main {
   gap: 8px;
 }
 .hero-copy h1 {
-  font-size: clamp(36px, 4.05vw, 64px);
+  font-size: clamp(2.25rem, 4.05vw, 4rem);
   line-height: 1.13;
   font-weight: 600;
   letter-spacing: -2.7px;
@@ -471,7 +471,7 @@ main {
   animation: blink 1.3s steps(1) infinite;
 }
 .hero-description {
-  font-size: 13px;
+  font-size: 1rem;
   line-height: 1.9;
   color: var(--muted);
   max-width: 410px;
@@ -491,7 +491,7 @@ main {
   justify-content: center;
   gap: 25px;
   padding: 12px 19px;
-  font-size: 11px;
+  font-size: 0.875rem;
   font-weight: 600;
   border: 1px solid var(--line);
   border-radius: 6px;
@@ -514,7 +514,7 @@ main {
   display: flex;
   gap: 20px;
   margin-top: 32px;
-  font-size: 7px;
+  font-size: 0.875rem;
   letter-spacing: 0.7px;
   color: var(--muted);
 }
@@ -527,7 +527,7 @@ main {
   border-radius: 10px;
   background: var(--panel);
   box-shadow: 0 20px 65px var(--shadow);
-  font-size: 11px;
+  font-size: 0.875rem;
   position: relative;
   transform: rotate(1deg);
   margin: 8px 3px 26px 0;
@@ -538,7 +538,7 @@ main {
   gap: 17px;
   padding: 13px 17px;
   border-bottom: 1px solid var(--line);
-  font-size: 9px;
+  font-size: 0.875rem;
   color: var(--muted);
 }
 .traffic-lights {
@@ -571,7 +571,7 @@ main {
   white-space: pre;
 }
 .code-body b {
-  font-size: 9px;
+  font-size: 0.875rem;
   color: var(--muted);
   opacity: 0.55;
   font-weight: 400;
@@ -589,7 +589,7 @@ main {
 .code-footer {
   border-top: 1px solid var(--line);
   padding: 10px 16px;
-  font-size: 8px;
+  font-size: 0.875rem;
   color: var(--muted);
   display: flex;
   align-items: center;
@@ -612,13 +612,13 @@ main {
 }
 .code-sticker > span:first-child {
   display: block;
-  font-size: 8px;
+  font-size: 0.875rem;
   letter-spacing: 1px;
 }
 .code-sticker strong {
   display: block;
   font-family: Georgia, serif;
-  font-size: 22px;
+  font-size: 1.375rem;
   line-height: 1.3;
   font-style: italic;
   font-weight: 400;
@@ -627,7 +627,7 @@ main {
   position: absolute;
   right: 12px;
   top: 17px;
-  font-size: 28px;
+  font-size: 1.75rem;
   line-height: 1;
 }
 .bento-grid {
@@ -659,14 +659,14 @@ main {
   color: var(--muted);
 }
 .mini-label {
-  font-size: 8px;
+  font-size: 0.875rem;
   letter-spacing: 1.2px;
   color: var(--muted);
 }
 .rilt-letters {
   display: flex;
   gap: 14px;
-  font-size: 51px;
+  font-size: 3.1875rem;
   line-height: 1.3;
   font-weight: 600;
   letter-spacing: -3px;
@@ -674,18 +674,18 @@ main {
 }
 .panel-bottom p,
 .bento > p {
-  font-size: 11px;
+  font-size: 0.875rem;
   color: var(--muted);
   line-height: 1.85;
 }
 .panel-bottom a {
   display: inline-block;
-  font-size: 10px;
+  font-size: 0.875rem;
   color: var(--green);
   margin-top: 10px;
 }
 .bento h2 {
-  font-size: 23px;
+  font-size: 1.4375rem;
   line-height: 1.3;
   letter-spacing: -0.7px;
   font-weight: 500;
@@ -712,7 +712,7 @@ main {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 10px;
+  font-size: 0.875rem;
 }
 .company-icon {
   height: 29px;
@@ -720,14 +720,14 @@ main {
   border: 1px solid var(--line);
   display: grid;
   place-items: center;
-  font-size: 15px;
+  font-size: 1rem;
   font-weight: 700;
   border-radius: 6px;
   color: var(--green);
 }
 .company-line small {
   display: block;
-  font-size: 7px;
+  font-size: 0.875rem;
   letter-spacing: 0.6px;
   color: var(--muted);
   margin-top: 3px;
@@ -754,7 +754,7 @@ main {
   display: grid;
   place-items: center;
   font-family: Consolas, monospace;
-  font-size: 17px;
+  font-size: 1.0625rem;
   border: 1px solid var(--line);
   border-radius: 6px;
   background: var(--panel);
@@ -767,11 +767,11 @@ main {
   color: var(--blue);
 }
 .flow-mini i {
-  font-size: 12px;
+  font-size: 0.875rem;
   color: var(--muted);
 }
 .text-link {
-  font-size: 10px;
+  font-size: 0.875rem;
   color: var(--green);
 }
 .interactive-bento .text-link {
@@ -786,11 +786,11 @@ main {
   padding: 46px 0 23px;
 }
 .section-heading .eyebrow {
-  font-size: 8px;
+  font-size: 0.875rem;
   margin-bottom: 8px;
 }
 .section-heading h2 {
-  font-size: 27px;
+  font-size: 1.6875rem;
   font-weight: 500;
   letter-spacing: -1px;
 }
@@ -838,7 +838,7 @@ main {
   position: absolute;
   top: 6px;
   left: 12px;
-  font-size: 7px;
+  font-size: 0.875rem;
   font-family: Consolas, monospace;
   color: #283123;
   letter-spacing: 1px;
@@ -848,7 +848,7 @@ main {
 }
 .project-category {
   color: var(--muted);
-  font-size: 7px;
+  font-size: 0.875rem;
   letter-spacing: 1px;
 }
 .project-title-line {
@@ -859,18 +859,18 @@ main {
   margin: 5px 0 9px;
 }
 .project-body h3 {
-  font-size: 17px;
+  font-size: 1.0625rem;
   font-weight: 500;
   letter-spacing: -0.4px;
 }
 .project-title-line > a {
   color: var(--green);
-  font-size: 17px;
+  font-size: 1.0625rem;
   min-width: 25px;
   text-align: right;
 }
 .project-body > p {
-  font-size: 11px;
+  font-size: 0.875rem;
   color: var(--muted);
   line-height: 1.8;
 }
@@ -879,7 +879,7 @@ main {
   gap: 6px;
   flex-wrap: wrap;
   margin-top: 14px;
-  font-size: 8px;
+  font-size: 0.875rem;
   color: var(--muted);
 }
 .project-tags span {
@@ -893,12 +893,12 @@ main {
   padding-top: 12px;
   display: flex;
   justify-content: space-between;
-  font-size: 10px;
+  font-size: 0.875rem;
 }
 .project-links button {
   padding: 0;
   color: var(--green);
-  font-size: 10px;
+  font-size: 0.875rem;
 }
 .project-links > a {
   color: var(--muted);
@@ -908,21 +908,21 @@ main {
   align-items: center;
   gap: 10px;
   padding: 30px 0 0;
-  font-size: 10px;
+  font-size: 0.875rem;
   color: var(--muted);
 }
 .end-note > span {
-  font-size: 19px;
+  font-size: 1.1875rem;
 }
 .end-note kbd {
   border: 1px solid var(--line);
   padding: 2px 4px;
-  font-size: 9px;
+  font-size: 0.875rem;
 }
 .end-note button {
   margin-left: auto;
   color: var(--green);
-  font-size: 10px;
+  font-size: 0.875rem;
 }
 .page-footer {
   border-top: 1px solid var(--line);
@@ -931,7 +931,7 @@ main {
   justify-content: space-between;
   gap: 20px;
   color: var(--muted);
-  font-size: 8px;
+  font-size: 0.875rem;
   letter-spacing: 0.3px;
 }
 .statusbar {
@@ -946,7 +946,7 @@ main {
   gap: 20px;
   padding: 0 20px;
   color: var(--muted);
-  font-size: 9px;
+  font-size: 0.875rem;
 }
 .statusbar > span:first-child {
   color: var(--green);
@@ -958,7 +958,7 @@ main {
 }
 .statusbar > button {
   margin-left: auto;
-  font-size: 9px;
+  font-size: 0.875rem;
 }
 .statusbar > button:hover {
   color: var(--green);
@@ -967,7 +967,7 @@ main {
   padding: 16px 0 35px;
 }
 .page-heading h1 {
-  font-size: clamp(38px, 5vw, 66px);
+  font-size: clamp(2.375rem, 5vw, 4.125rem);
   line-height: 1.12;
   font-weight: 550;
   letter-spacing: -2.6px;
@@ -975,7 +975,7 @@ main {
 }
 .page-heading > p:last-child {
   max-width: 620px;
-  font-size: 14px;
+  font-size: 1rem;
   line-height: 1.9;
   color: var(--muted);
 }
@@ -985,7 +985,7 @@ main {
   margin: 0 0 26px;
 }
 .project-filter button {
-  font-size: 10px;
+  font-size: 0.875rem;
   border: 1px solid var(--line);
   padding: 8px 13px;
   border-radius: 5px;
@@ -1011,18 +1011,18 @@ main {
   padding: 30px;
 }
 .bio-panel > .large-copy {
-  font-size: 24px;
+  font-size: 1.5rem;
   line-height: 1.5;
   color: var(--text);
   letter-spacing: -0.4px;
   margin-bottom: 20px;
 }
 .bio-panel > p {
-  font-size: 13px;
+  font-size: 1rem;
   margin-bottom: 17px;
 }
 .bio-signature {
-  font-size: 24px;
+  font-size: 1.5rem;
   font-family: Georgia, serif;
   font-style: italic;
   color: var(--green);
@@ -1030,7 +1030,7 @@ main {
 }
 .bio-signature span {
   display: block;
-  font-size: 8px;
+  font-size: 0.875rem;
   font-family: Consolas, monospace;
   letter-spacing: 1px;
   font-style: normal;
@@ -1041,18 +1041,18 @@ main {
   padding: 30px;
 }
 .principles h3 {
-  font-size: 19px;
+  font-size: 1.1875rem;
   font-weight: 500;
   margin: 25px 0 6px;
 }
 .principles h3 > span {
   color: var(--purple);
   font-family: Consolas, monospace;
-  font-size: 12px;
+  font-size: 0.875rem;
   margin-right: 12px;
 }
 .principles p {
-  font-size: 12px;
+  font-size: 0.875rem;
   padding-left: 30px;
 }
 .experience-row {
@@ -1063,26 +1063,26 @@ main {
   padding: 28px 0;
 }
 .experience-date {
-  font-size: 10px;
+  font-size: 0.875rem;
   color: var(--muted);
   padding-top: 4px;
 }
 .experience-date > span {
   display: block;
-  font-size: 8px;
+  font-size: 0.875rem;
   margin-top: 10px;
 }
 .experience-row h3 {
-  font-size: 23px;
+  font-size: 1.4375rem;
   font-weight: 500;
 }
 .experience-row .role {
   color: var(--purple);
-  font-size: 12px;
+  font-size: 0.875rem;
   margin: 5px 0 13px;
 }
 .experience-row p:last-child {
-  font-size: 13px;
+  font-size: 1rem;
   color: var(--muted);
   max-width: 650px;
 }
@@ -1092,7 +1092,7 @@ main {
   gap: 16px;
 }
 .education-grid h3 {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 500;
   margin: 15px 0 8px;
 }
@@ -1100,12 +1100,12 @@ main {
   margin-top: 20px;
 }
 .architecture-notes h3 {
-  font-size: 20px;
+  font-size: 1.25rem;
   margin: 16px 0 12px;
   font-weight: 500;
 }
 .architecture-notes p {
-  font-size: 12px;
+  font-size: 0.875rem;
 }
 .architecture-notes a {
   display: block;
@@ -1120,7 +1120,7 @@ main {
   padding: 28px;
 }
 .contact-form label {
-  font-size: 12px;
+  font-size: 0.875rem;
   display: block;
   margin-bottom: 8px;
 }
@@ -1131,7 +1131,7 @@ main {
   border: 1px solid var(--line);
   border-radius: 5px;
   padding: 12px 14px;
-  font-size: 12px;
+  font-size: 0.875rem;
   resize: vertical;
 }
 .contact-form input::placeholder,
@@ -1145,16 +1145,16 @@ main {
 .field-error {
   min-height: 22px;
   color: var(--red) !important;
-  font-size: 10px !important;
+  font-size: 0.875rem !important;
   margin-top: 4px;
 }
 .contact-form > .form-note {
-  font-size: 10px;
+  font-size: 0.875rem;
   margin-top: 15px;
 }
 .contact-form > #form-status {
   color: var(--green);
-  font-size: 12px;
+  font-size: 0.875rem;
   margin-top: 12px;
 }
 .contact-details {
@@ -1166,18 +1166,18 @@ main {
   display: block;
 }
 .contact-symbol {
-  font-size: 45px;
+  font-size: 2.8125rem;
   display: block;
   line-height: 1.5;
   margin-top: 17px;
 }
 .contact-tile h3 {
-  font-size: 26px;
+  font-size: 1.625rem;
   letter-spacing: -0.6px;
   font-weight: 500;
 }
 .contact-tile p {
-  font-size: 11px;
+  font-size: 0.875rem;
   color: var(--muted);
   margin-top: 5px;
   overflow-wrap: anywhere;
@@ -1191,7 +1191,7 @@ main {
   gap: 12px;
   padding: 13px 0;
   border-bottom: 1px solid var(--line);
-  font-size: 13px;
+  font-size: 1rem;
 }
 .social-list a:last-child {
   border: 0;
@@ -1221,18 +1221,18 @@ html[data-theme="dark"] .social-github-icon {
   padding: 0 25px 15px;
   box-shadow: 0 -10px 35px var(--shadow);
   font-family: Consolas, monospace;
-  font-size: 11px;
+  font-size: 0.875rem;
 }
 .terminal-heading {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 9px;
+  font-size: 0.875rem;
   padding: 11px 0;
   border-bottom: 1px solid var(--line);
 }
 .terminal-heading button {
-  font-size: 20px;
+  font-size: 1.25rem;
 }
 .terminal-output {
   max-height: 130px;
@@ -1291,7 +1291,7 @@ html[data-theme="dark"] .social-github-icon {
 }
 .palette-header > span {
   color: var(--green);
-  font-size: 23px;
+  font-size: 1.4375rem;
 }
 .palette-header input {
   flex: 1;
@@ -1299,10 +1299,10 @@ html[data-theme="dark"] .social-github-icon {
   background: none;
   border: 0;
   outline: 0;
-  font-size: 13px;
+  font-size: 1rem;
 }
 .palette-header button {
-  font-size: 9px;
+  font-size: 0.875rem;
   border: 1px solid var(--line);
   padding: 2px 5px;
   border-radius: 3px;
@@ -1319,7 +1319,7 @@ html[data-theme="dark"] .social-github-icon {
   width: 100%;
   gap: 12px;
   padding: 12px;
-  font-size: 12px;
+  font-size: 0.875rem;
   border-radius: 5px;
   text-align: left;
   color: var(--text);
@@ -1331,10 +1331,10 @@ html[data-theme="dark"] .social-github-icon {
 #command-results button > span:last-child {
   margin-left: auto;
   color: var(--muted);
-  font-size: 10px;
+  font-size: 0.875rem;
 }
 .palette-hint {
-  font-size: 9px;
+  font-size: 0.875rem;
   color: var(--muted);
   border-top: 1px solid var(--line);
   padding: 13px 20px;
@@ -1343,7 +1343,7 @@ html[data-theme="dark"] .social-github-icon {
 .no-results {
   color: var(--muted);
   padding: 15px;
-  font-size: 12px;
+  font-size: 0.875rem;
 }
 .project-dialog {
   width: min(750px, calc(100% - 32px));
@@ -1353,11 +1353,11 @@ html[data-theme="dark"] .social-github-icon {
   position: absolute;
   top: 10px;
   right: 15px;
-  font-size: 25px;
+  font-size: 1.5625rem;
   color: var(--muted);
 }
 .project-dialog h2 {
-  font-size: 34px;
+  font-size: 2.125rem;
   letter-spacing: -1px;
   font-weight: 500;
   margin: 12px 0 24px;
@@ -1372,18 +1372,18 @@ html[data-theme="dark"] .social-github-icon {
   margin-bottom: 22px;
 }
 .project-dialog h3 {
-  font-size: 17px;
+  font-size: 1.0625rem;
   margin: 22px 0 8px;
   font-weight: 500;
 }
 .project-dialog p {
-  font-size: 13px;
+  font-size: 1rem;
   line-height: 1.9;
   color: var(--muted);
 }
 .project-dialog .project-links {
   margin-top: 25px;
-  font-size: 13px;
+  font-size: 1rem;
 }
 .noscript-notice {
   position: fixed;
@@ -1400,7 +1400,7 @@ html[data-theme="dark"] .social-github-icon {
 }
 @media (min-width: 1600px) {
   .hero-copy h1 {
-    font-size: 65px;
+    font-size: 4.0625rem;
   }
   .hero-grid {
     gap: 75px;
@@ -1417,7 +1417,7 @@ html[data-theme="dark"] .social-github-icon {
     min-width: 151px;
   }
   .file-nav a {
-    font-size: 10px;
+    font-size: 0.875rem;
     padding-inline: 12px;
     gap: 7px;
   }
@@ -1431,11 +1431,11 @@ html[data-theme="dark"] .social-github-icon {
     gap: 25px;
   }
   .hero-copy h1 {
-    font-size: 43px;
+    font-size: 2.6875rem;
     letter-spacing: -2px;
   }
   .code-window {
-    font-size: 9px;
+    font-size: 0.875rem;
   }
   .code-body b {
     min-width: 30px;
@@ -1444,10 +1444,10 @@ html[data-theme="dark"] .social-github-icon {
     min-height: 22px;
   }
   .code-title {
-    font-size: 8px;
+    font-size: 0.875rem;
   }
   .hero-footnote {
-    font-size: 6px;
+    font-size: 0.875rem;
     gap: 10px;
   }
   .hero-footnote > span + span {
@@ -1460,11 +1460,11 @@ html[data-theme="dark"] .social-github-icon {
     gap: 12px;
   }
   .rilt-letters {
-    font-size: 42px;
+    font-size: 2.625rem;
     gap: 11px;
   }
   .bento h2 {
-    font-size: 21px;
+    font-size: 1.3125rem;
   }
   .project-media {
     height: 145px;
@@ -1474,13 +1474,13 @@ html[data-theme="dark"] .social-github-icon {
     padding: 14px;
   }
   .project-body h3 {
-    font-size: 15px;
+    font-size: 1rem;
   }
   .topbar {
     gap: 18px;
   }
   .window-title {
-    font-size: 8px;
+    font-size: 0.875rem;
   }
   .top-actions {
     gap: 12px;
@@ -1501,16 +1501,16 @@ html[data-theme="dark"] .social-github-icon {
     gap: 25px;
   }
   .hero-copy h1 {
-    font-size: 36px;
+    font-size: 2.25rem;
     letter-spacing: -1.7px;
   }
   .hero-description {
-    font-size: 12px;
+    font-size: 0.875rem;
   }
   .button {
     gap: 13px;
     padding: 11px 14px;
-    font-size: 10px;
+    font-size: 0.875rem;
   }
   .hero-footnote {
     flex-direction: column;
@@ -1521,7 +1521,7 @@ html[data-theme="dark"] .social-github-icon {
     padding: 0;
   }
   .code-window {
-    font-size: 8px;
+    font-size: 0.875rem;
   }
   .code-body b {
     min-width: 25px;
@@ -1531,7 +1531,7 @@ html[data-theme="dark"] .social-github-icon {
     gap: 8px;
   }
   .code-footer {
-    font-size: 7px;
+    font-size: 0.875rem;
     padding-inline: 10px;
   }
   .code-sticker {
@@ -1539,11 +1539,11 @@ html[data-theme="dark"] .social-github-icon {
     padding: 8px 37px 8px 12px;
   }
   .code-sticker strong {
-    font-size: 20px;
+    font-size: 1.25rem;
   }
   .code-sticker .sticker-spark {
     right: 8px;
-    font-size: 23px;
+    font-size: 1.4375rem;
   }
   .bento-grid {
     grid-template-columns: 1fr 1fr;
@@ -1606,7 +1606,7 @@ html[data-theme="dark"] .social-github-icon {
   }
   .identity {
     min-width: 0;
-    font-size: 18px;
+    font-size: 1.125rem;
   }
   .identity img {
     width: 31px;
@@ -1620,7 +1620,7 @@ html[data-theme="dark"] .social-github-icon {
     height: 34px;
     padding: 0;
     justify-content: center;
-    font-size: 21px;
+    font-size: 1.3125rem;
     background: none;
     border: 0;
   }
@@ -1651,7 +1651,7 @@ html[data-theme="dark"] .social-github-icon {
     display: flex;
   }
   .file-nav a {
-    font-size: 12px;
+    font-size: 0.875rem;
     padding: 14px 20px;
   }
   .sidebar-bottom {
@@ -1663,7 +1663,7 @@ html[data-theme="dark"] .social-github-icon {
   }
   .active-tab {
     padding-inline: 16px;
-    font-size: 10px;
+    font-size: 0.875rem;
     gap: 9px;
   }
   .tab-dot {
@@ -1673,19 +1673,19 @@ html[data-theme="dark"] .social-github-icon {
     display: none;
   }
   .session {
-    font-size: 7px;
+    font-size: 0.875rem;
     gap: 6px;
     padding: 0 16px;
   }
   .session time {
-    font-size: 9px;
+    font-size: 0.875rem;
     min-width: 33px;
   }
   main {
     padding: 0 22px;
   }
   .breadcrumb {
-    font-size: 8px;
+    font-size: 0.875rem;
     gap: 9px;
     padding: 20px 0;
   }
@@ -1695,19 +1695,19 @@ html[data-theme="dark"] .social-github-icon {
     padding: 10px 0 36px;
   }
   .hero-copy h1 {
-    font-size: clamp(36px, 8.4vw, 58px);
+    font-size: clamp(2.25rem, 8.4vw, 3.625rem);
     letter-spacing: -2px;
     margin: 18px 0 20px;
   }
   .hero-description {
-    font-size: 13px;
+    font-size: 1rem;
     max-width: 450px;
   }
   .hero-actions {
     margin-top: 24px;
   }
   .button {
-    font-size: 11px;
+    font-size: 0.875rem;
     padding: 12px 18px;
     gap: 23px;
   }
@@ -1715,14 +1715,14 @@ html[data-theme="dark"] .social-github-icon {
     flex-direction: row;
     gap: 15px;
     margin-top: 25px;
-    font-size: 6px;
+    font-size: 0.875rem;
   }
   .hero-footnote > span + span {
     border-left: 1px solid var(--line);
     padding-left: 15px;
   }
   .code-window {
-    font-size: 11px;
+    font-size: 0.875rem;
     width: 100%;
     max-width: 500px;
     justify-self: center;
@@ -1736,12 +1736,12 @@ html[data-theme="dark"] .social-github-icon {
     min-height: 23px;
   }
   .code-title {
-    font-size: 9px;
+    font-size: 0.875rem;
     padding: 12px 16px;
     gap: 15px;
   }
   .code-footer {
-    font-size: 8px;
+    font-size: 0.875rem;
     padding: 12px;
   }
   .code-sticker {
@@ -1750,12 +1750,12 @@ html[data-theme="dark"] .social-github-icon {
     padding: 11px 48px 11px 17px;
   }
   .code-sticker strong {
-    font-size: 23px;
+    font-size: 1.4375rem;
   }
   .code-sticker .sticker-spark {
     right: 12px;
     top: 18px;
-    font-size: 28px;
+    font-size: 1.75rem;
   }
   .bento-grid {
     gap: 13px;
@@ -1764,33 +1764,33 @@ html[data-theme="dark"] .social-github-icon {
     padding: 20px;
   }
   .mini-label {
-    font-size: 7px;
+    font-size: 0.875rem;
     letter-spacing: 0.9px;
   }
   .bento-grid .bento {
     padding: 16px;
   }
   .rilt-letters {
-    font-size: 34px;
+    font-size: 2.125rem;
     gap: 9px;
     margin-block: 20px;
   }
   .panel-bottom p,
   .bento > p {
-    font-size: 10px;
+    font-size: 0.875rem;
   }
   .panel-bottom a {
-    font-size: 9px;
+    font-size: 0.875rem;
   }
   .bento-grid .bento h2 {
-    font-size: 20px;
+    font-size: 1.25rem;
   }
   .company-line {
-    font-size: 9px;
+    font-size: 0.875rem;
     gap: 7px;
   }
   .company-line small {
-    font-size: 6px;
+    font-size: 0.875rem;
   }
   .company-line > span:last-child {
     display: none;
@@ -1798,7 +1798,7 @@ html[data-theme="dark"] .social-github-icon {
   .company-icon {
     width: 24px;
     height: 24px;
-    font-size: 12px;
+    font-size: 0.875rem;
     flex-shrink: 0;
   }
   .flow-mini {
@@ -1815,10 +1815,10 @@ html[data-theme="dark"] .social-github-icon {
     padding-top: 35px;
   }
   .section-heading h2 {
-    font-size: 27px;
+    font-size: 1.6875rem;
   }
   .section-heading .eyebrow {
-    font-size: 7px;
+    font-size: 0.875rem;
   }
   .project-grid {
     grid-template-columns: 1fr;
@@ -1839,32 +1839,32 @@ html[data-theme="dark"] .social-github-icon {
     padding: 20px;
   }
   .project-body h3 {
-    font-size: 22px;
+    font-size: 1.375rem;
   }
   .project-category {
-    font-size: 8px;
+    font-size: 0.875rem;
   }
   .project-body > p {
-    font-size: 12px;
+    font-size: 0.875rem;
   }
   .project-tags {
-    font-size: 9px;
+    font-size: 0.875rem;
     gap: 8px;
   }
   .project-links,
   .project-links button {
-    font-size: 11px;
+    font-size: 0.875rem;
   }
   .end-note {
     flex-wrap: wrap;
     gap: 10px;
-    font-size: 9px;
+    font-size: 0.875rem;
   }
   .end-note button {
     margin-left: 27px;
   }
   .page-footer {
-    font-size: 7px;
+    font-size: 0.875rem;
     gap: 15px;
     padding-bottom: 30px;
     flex-direction: column;
@@ -1872,10 +1872,10 @@ html[data-theme="dark"] .social-github-icon {
   .statusbar {
     gap: 15px;
     padding-inline: 15px;
-    font-size: 8px;
+    font-size: 0.875rem;
   }
   .statusbar-middle {
-    font-size: 7px;
+    font-size: 0.875rem;
   }
   .statusbar > span:last-child {
     display: none;
@@ -1884,18 +1884,18 @@ html[data-theme="dark"] .social-github-icon {
     padding: 13px 0 25px;
   }
   .page-heading h1 {
-    font-size: 43px;
+    font-size: 2.6875rem;
     letter-spacing: -1.8px;
   }
   .page-heading > p:last-child {
-    font-size: 13px;
+    font-size: 1rem;
   }
   .project-filter {
     gap: 6px;
     flex-wrap: wrap;
   }
   .project-filter button {
-    font-size: 9px;
+    font-size: 0.875rem;
     padding: 8px 10px;
   }
   .bio-panel,
@@ -1904,10 +1904,10 @@ html[data-theme="dark"] .social-github-icon {
     padding: 23px;
   }
   .bio-panel > .large-copy {
-    font-size: 23px;
+    font-size: 1.4375rem;
   }
   .bio-panel > p {
-    font-size: 12px;
+    font-size: 0.875rem;
   }
   .experience-row {
     grid-template-columns: 1fr;
@@ -1923,26 +1923,26 @@ html[data-theme="dark"] .social-github-icon {
     margin: 0;
   }
   .experience-row h3 {
-    font-size: 22px;
+    font-size: 1.375rem;
   }
   .experience-row p:last-child {
-    font-size: 12px;
+    font-size: 0.875rem;
   }
   .education-grid h3 {
-    font-size: 18px;
+    font-size: 1.125rem;
   }
   .architecture-notes p {
-    font-size: 12px;
+    font-size: 0.875rem;
   }
   .contact-tile p {
-    font-size: 11px;
+    font-size: 0.875rem;
   }
   .contact-form > .form-note {
-    font-size: 10px;
+    font-size: 0.875rem;
   }
   .terminal {
     padding-inline: 17px;
-    font-size: 10px;
+    font-size: 0.875rem;
   }
   .terminal form {
     gap: 7px;
@@ -1951,7 +1951,7 @@ html[data-theme="dark"] .social-github-icon {
     padding: 26px 22px;
   }
   .project-dialog h2 {
-    font-size: 27px;
+    font-size: 1.6875rem;
   }
   .project-dialog img {
     height: 200px;
@@ -1962,17 +1962,17 @@ html[data-theme="dark"] .social-github-icon {
     padding-inline: 16px;
   }
   .hero-footnote {
-    font-size: 5.5px;
+    font-size: 0.875rem;
     gap: 10px;
   }
   .hero-footnote > span + span {
     padding-left: 10px;
   }
   .hero-copy h1 {
-    font-size: 36px;
+    font-size: 2.25rem;
   }
   .code-window {
-    font-size: 9px;
+    font-size: 0.875rem;
   }
   .code-body b {
     min-width: 27px;
@@ -1985,23 +1985,23 @@ html[data-theme="dark"] .social-github-icon {
     display: block;
   }
   .rilt-letters {
-    font-size: 48px;
+    font-size: 3rem;
     gap: 22px;
   }
   .currently-bento > p {
-    font-size: 12px;
+    font-size: 0.875rem;
   }
   .company-line > span:last-child {
     display: block;
   }
   .company-line {
-    font-size: 11px;
+    font-size: 0.875rem;
   }
   .company-line small {
-    font-size: 7px;
+    font-size: 0.875rem;
   }
   .panel-bottom p {
-    font-size: 12px;
+    font-size: 0.875rem;
   }
   .interactive-bento .flow-mini {
     justify-content: start;
@@ -2016,13 +2016,13 @@ html[data-theme="dark"] .social-github-icon {
     height: 210px;
   }
   .page-heading h1 {
-    font-size: 36px;
+    font-size: 2.25rem;
   }
   .project-filter button {
-    font-size: 8px;
+    font-size: 0.875rem;
   }
   .terminal {
-    font-size: 9px;
+    font-size: 0.875rem;
   }
   .terminal form {
     gap: 5px;
@@ -2112,7 +2112,7 @@ main:focus {
   gap: 3px;
 }
 .lab-mode-switch button {
-  font-size: 11px;
+  font-size: 0.875rem;
   padding: 9px 12px;
   border-radius: 4px;
   color: var(--muted);
@@ -2124,13 +2124,13 @@ main:focus {
 }
 .lab-mode-switch button span {
   font-family: Consolas, monospace;
-  font-size: 8px;
+  font-size: 0.875rem;
   margin-left: 9px;
   color: var(--purple);
 }
 .lab-simulation {
   font-family: Consolas, monospace;
-  font-size: 8px;
+  font-size: 0.875rem;
   letter-spacing: 0.5px;
   color: var(--muted);
   display: flex;
@@ -2156,7 +2156,7 @@ main:focus {
   border: 1px solid var(--line);
   padding: 4px 9px;
   font:
-    9px Consolas,
+    0.875rem Consolas,
     monospace;
   letter-spacing: 0.7px;
   border-radius: 3px;
@@ -2194,16 +2194,16 @@ main:focus {
   border-bottom: 1px solid var(--line);
 }
 .endpoint-label > span:first-child {
-  font-size: 18px;
+  font-size: 1.125rem;
 }
 .endpoint-label h2 {
-  font-size: 13px;
+  font-size: 1rem;
   font-weight: 500;
 }
 .endpoint-tag {
   margin-left: auto;
   font:
-    7px Consolas,
+    0.875rem Consolas,
     monospace;
   letter-spacing: 1px;
   color: var(--muted);
@@ -2214,7 +2214,7 @@ main:focus {
   padding: 10px 13px;
   background: var(--bg);
   font:
-    9px Consolas,
+    0.875rem Consolas,
     monospace;
   color: var(--muted);
   align-items: center;
@@ -2241,12 +2241,12 @@ main:focus {
   padding: 14px 14px 12px;
 }
 .mock-brand strong {
-  font-size: 12px;
+  font-size: 0.875rem;
   font-weight: 600;
 }
 .mock-brand > span {
   margin-left: auto;
-  font-size: 8px;
+  font-size: 0.875rem;
   color: var(--muted);
 }
 .mock-navigation {
@@ -2254,11 +2254,11 @@ main:focus {
   gap: 18px;
   padding: 0 16px 10px;
   border-bottom: 1px solid var(--line);
-  font-size: 9px;
+  font-size: 0.875rem;
   color: var(--muted);
 }
 .mock-navigation button {
-  font-size: 9px;
+  font-size: 0.875rem;
   padding: 0;
   color: var(--muted);
 }
@@ -2275,19 +2275,19 @@ main:focus {
 }
 .mock-page-label {
   font:
-    8px Consolas,
+    0.875rem Consolas,
     monospace;
   color: var(--muted);
 }
 .mock-page h3 {
-  font-size: 23px;
+  font-size: 1.4375rem;
   letter-spacing: -0.6px;
   font-weight: 500;
   margin: 8px 0 9px;
 }
 .mock-page p {
   color: var(--muted);
-  font-size: 10px;
+  font-size: 0.875rem;
   line-height: 1.8;
 }
 .mock-skeleton {
@@ -2310,7 +2310,7 @@ main:focus {
   margin-top: 12px;
 }
 .mock-project-list > div {
-  font-size: 9px;
+  font-size: 0.875rem;
   display: flex;
   gap: 10px;
   align-items: center;
@@ -2322,7 +2322,7 @@ main:focus {
 .mock-project-list > div > span {
   color: var(--muted);
   font:
-    8px Consolas,
+    0.875rem Consolas,
     monospace;
 }
 .mock-project-list i {
@@ -2336,7 +2336,7 @@ main:focus {
   gap: 6px;
   padding: 10px 12px;
   font:
-    7px Consolas,
+    0.875rem Consolas,
     monospace;
   color: var(--muted);
   border-top: 1px solid var(--line);
@@ -2345,7 +2345,7 @@ main:focus {
 .mock-persistent > span:last-child {
   margin-left: auto;
   color: var(--green);
-  font-size: 6px;
+  font-size: 0.875rem;
   letter-spacing: 0.3px;
 }
 .browser-waiting {
@@ -2353,11 +2353,11 @@ main:focus {
   padding-block: 14px;
 }
 .browser-waiting > span {
-  font-size: 28px;
+  font-size: 1.75rem;
   color: var(--muted);
 }
 .browser-waiting h3 {
-  font-size: 16px;
+  font-size: 1rem;
 }
 .network-bridge {
   position: relative;
@@ -2402,14 +2402,14 @@ main:focus {
   width: 100%;
   text-align: center;
   font:
-    7px Consolas,
+    0.875rem Consolas,
     monospace;
   color: var(--muted);
   letter-spacing: 0.6px;
 }
 .wire-label strong {
   display: block;
-  font-size: 8px;
+  font-size: 0.875rem;
   font-weight: 400;
   letter-spacing: 0;
   margin-top: 5px;
@@ -2442,18 +2442,18 @@ main:focus {
 .server-task-index {
   color: var(--muted);
   font:
-    9px Consolas,
+    0.875rem Consolas,
     monospace;
 }
 .server-route strong {
   display: block;
-  font-size: 11px;
+  font-size: 0.875rem;
   font-weight: 500;
 }
 .server-route code {
   display: block;
   font:
-    8px Consolas,
+    0.875rem Consolas,
     monospace;
   color: var(--muted);
   margin-top: 4px;
@@ -2476,19 +2476,19 @@ main:focus {
   padding: 11px;
 }
 .database-icon {
-  font-size: 24px;
+  font-size: 1.5rem;
   color: var(--yellow);
 }
 .database-block strong,
 .server-envelope strong {
   display: block;
-  font-size: 10px;
+  font-size: 0.875rem;
   font-weight: 500;
 }
 .database-block div > span,
 .server-envelope div > span {
   display: block;
-  font-size: 8px;
+  font-size: 0.875rem;
   color: var(--muted);
   margin-top: 3px;
 }
@@ -2513,7 +2513,7 @@ main:focus {
 }
 .server-envelope > span {
   font:
-    17px Consolas,
+    1.0625rem Consolas,
     monospace;
 }
 .envelope-active {
@@ -2522,7 +2522,7 @@ main:focus {
 }
 .server-footnote {
   font:
-    7px Consolas,
+    0.875rem Consolas,
     monospace;
   color: var(--muted);
   padding: 12px 13px;
@@ -2538,11 +2538,11 @@ main:focus {
   margin-top: 23px;
 }
 .tailwind-role > span:first-child {
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 600;
 }
 .tailwind-role p {
-  font-size: 10px;
+  font-size: 0.875rem;
   color: var(--muted);
 }
 .tailwind-role strong {
@@ -2551,7 +2551,7 @@ main:focus {
 }
 .tailwind-role-tag {
   font:
-    7px Consolas,
+    0.875rem Consolas,
     monospace;
   color: var(--cyan);
   white-space: nowrap;
@@ -2579,7 +2579,7 @@ main:focus {
   width: 34px;
   height: 36px;
   background: var(--panel);
-  font-size: 17px;
+  font-size: 1.0625rem;
 }
 .playback-icon:hover {
   border-color: var(--green);
@@ -2593,7 +2593,7 @@ main:focus {
 }
 .playback-speed {
   margin-left: auto;
-  font-size: 9px;
+  font-size: 0.875rem;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -2601,7 +2601,7 @@ main:focus {
 }
 .playback-speed select {
   font:
-    10px Consolas,
+    0.875rem Consolas,
     monospace;
   border: 1px solid var(--line);
   background: var(--bg);
@@ -2611,7 +2611,7 @@ main:focus {
 }
 .step-counter {
   font:
-    9px Consolas,
+    0.875rem Consolas,
     monospace;
   color: var(--muted);
   white-space: nowrap;
@@ -2633,11 +2633,11 @@ main:focus {
   align-items: center;
   gap: 7px;
   color: var(--muted);
-  font-size: 9px;
+  font-size: 0.875rem;
 }
 .step-timeline button > span {
   font:
-    8px Consolas,
+    0.875rem Consolas,
     monospace;
   color: var(--muted);
 }
@@ -2667,14 +2667,14 @@ main:focus {
   min-width: 0;
 }
 .step-narration h2 {
-  font-size: 26px;
+  font-size: 1.625rem;
   font-weight: 500;
   letter-spacing: -0.7px;
   line-height: 1.25;
   margin: 15px 0;
 }
 .step-narration #flow-status {
-  font-size: 12px;
+  font-size: 0.875rem;
   line-height: 1.9;
   color: var(--muted);
   min-height: 112px;
@@ -2687,12 +2687,12 @@ main:focus {
   margin-top: 20px;
 }
 .learning-takeaway p {
-  font-size: 10px;
+  font-size: 0.875rem;
   line-height: 1.8;
   color: var(--muted);
 }
 .reduced-motion-note {
-  font-size: 9px;
+  font-size: 0.875rem;
   line-height: 1.8;
   color: var(--muted);
   margin-top: 15px;
@@ -2709,17 +2709,17 @@ main:focus {
   justify-content: space-between;
   gap: 10px;
   font:
-    9px Consolas,
+    0.875rem Consolas,
     monospace;
   color: var(--purple);
 }
 .inspector-header > span:last-child {
-  font-size: 7px;
+  font-size: 0.875rem;
   color: var(--muted);
 }
 .payload-inspector pre {
   font:
-    11px/1.9 Consolas,
+    0.875rem/1.9 Consolas,
     monospace;
   overflow: auto;
   padding: 22px;
@@ -2731,7 +2731,7 @@ main:focus {
 .lab-source {
   border-top: 1px solid var(--line);
   padding: 15px 22px;
-  font-size: 9px;
+  font-size: 0.875rem;
   color: var(--muted);
   display: flex;
   align-items: center;
@@ -2743,7 +2743,7 @@ main:focus {
 .lab-source > span {
   margin-left: auto;
   font:
-    8px Consolas,
+    0.875rem Consolas,
     monospace;
 }
 @media (max-width: 1200px) {
@@ -2760,14 +2760,14 @@ main:focus {
     gap: 6px;
   }
   .mock-brand > span {
-    font-size: 7px;
+    font-size: 0.875rem;
   }
   .mock-page h3 {
-    font-size: 21px;
+    font-size: 1.3125rem;
   }
   .mock-persistent {
     flex-wrap: wrap;
-    font-size: 6px;
+    font-size: 0.875rem;
     gap: 5px;
   }
   .server-route {
@@ -2775,7 +2775,7 @@ main:focus {
     padding: 9px;
   }
   .server-route code {
-    font-size: 7px;
+    font-size: 0.875rem;
   }
   .tailwind-role-tag {
     display: none;
@@ -2784,17 +2784,17 @@ main:focus {
     flex-wrap: wrap;
   }
   .step-timeline button {
-    font-size: 8px;
+    font-size: 0.875rem;
     gap: 4px;
   }
   .step-narration {
     padding: 22px;
   }
   .step-narration h2 {
-    font-size: 23px;
+    font-size: 1.4375rem;
   }
   .payload-inspector pre {
-    font-size: 10px;
+    font-size: 0.875rem;
     padding: 18px;
   }
 }
@@ -2826,37 +2826,37 @@ main:focus {
     right: 0;
   }
   .wire-label strong {
-    font-size: 9px;
+    font-size: 0.875rem;
   }
   .mock-brand > span {
-    font-size: 9px;
+    font-size: 0.875rem;
   }
   .mock-page {
     min-height: 190px;
   }
   .mock-persistent {
-    font-size: 8px;
+    font-size: 0.875rem;
     flex-wrap: nowrap;
   }
   .server-route {
     padding: 12px;
   }
   .server-route code {
-    font-size: 10px;
+    font-size: 0.875rem;
   }
   .server-route strong {
-    font-size: 12px;
+    font-size: 0.875rem;
   }
   .database-block strong,
   .server-envelope strong {
-    font-size: 12px;
+    font-size: 0.875rem;
   }
   .database-block div > span,
   .server-envelope div > span {
-    font-size: 10px;
+    font-size: 0.875rem;
   }
   .server-footnote {
-    font-size: 8px;
+    font-size: 0.875rem;
   }
   .explanation-grid {
     grid-template-columns: 1fr;
@@ -2909,15 +2909,15 @@ main:focus {
   }
   .lab-mode-switch button {
     flex: 1;
-    font-size: 10px;
+    font-size: 0.875rem;
     padding: 9px 7px;
   }
   .lab-mode-switch button span {
-    font-size: 7px;
+    font-size: 0.875rem;
     margin-left: 4px;
   }
   .lab-simulation {
-    font-size: 7px;
+    font-size: 0.875rem;
   }
   .lab-stage {
     padding: 14px;
@@ -2926,43 +2926,43 @@ main:focus {
     margin-bottom: 16px;
   }
   .phase-badge {
-    font-size: 8px;
+    font-size: 0.875rem;
   }
   .endpoint-label h2 {
-    font-size: 14px;
+    font-size: 1rem;
   }
   .endpoint-tag {
-    font-size: 7px;
+    font-size: 0.875rem;
   }
   .mock-brand {
     padding: 13px 12px;
   }
   .mock-brand > span {
-    font-size: 8px;
+    font-size: 0.875rem;
   }
   .mock-page {
     padding: 16px 13px;
   }
   .mock-page h3 {
-    font-size: 24px;
+    font-size: 1.5rem;
   }
   .mock-project-list > div {
-    font-size: 10px;
+    font-size: 0.875rem;
   }
   .mock-persistent {
-    font-size: 6px;
+    font-size: 0.875rem;
     padding-inline: 9px;
     gap: 5px;
   }
   .mock-persistent > span:last-child {
-    font-size: 6px;
+    font-size: 0.875rem;
   }
   .server-route {
     margin-inline: 10px;
     padding: 10px;
   }
   .server-route code {
-    font-size: 8px;
+    font-size: 0.875rem;
   }
   .database-block,
   .server-envelope {
@@ -2970,11 +2970,11 @@ main:focus {
   }
   .database-block strong,
   .server-envelope strong {
-    font-size: 11px;
+    font-size: 0.875rem;
   }
   .database-block div > span,
   .server-envelope div > span {
-    font-size: 9px;
+    font-size: 0.875rem;
   }
   .tailwind-role {
     align-items: start;
@@ -2983,11 +2983,11 @@ main:focus {
     margin-top: 18px;
   }
   .tailwind-role p {
-    font-size: 10px;
+    font-size: 0.875rem;
     line-height: 1.8;
   }
   .tailwind-role > span:first-child {
-    font-size: 20px;
+    font-size: 1.25rem;
   }
   .playback-bar {
     padding: 14px;
@@ -2998,7 +2998,7 @@ main:focus {
   .playback-actions .button {
     min-width: 0;
     flex: 1;
-    font-size: 10px;
+    font-size: 0.875rem;
     padding: 11px 10px;
     gap: 10px;
   }
@@ -3014,25 +3014,25 @@ main:focus {
     padding: 21px;
   }
   .step-narration h2 {
-    font-size: 25px;
+    font-size: 1.5625rem;
   }
   .step-narration #flow-status {
-    font-size: 12px;
+    font-size: 0.875rem;
   }
   .inspector-header {
     padding-inline: 15px;
-    font-size: 8px;
+    font-size: 0.875rem;
   }
   .inspector-header > span:last-child {
-    font-size: 6px;
+    font-size: 0.875rem;
   }
   .payload-inspector pre {
-    font-size: 9px;
+    font-size: 0.875rem;
     padding: 17px 15px;
   }
   .lab-source {
     padding: 15px;
-    font-size: 9px;
+    font-size: 0.875rem;
   }
 }
 
@@ -3052,4 +3052,468 @@ main:focus {
 .file-icon {
   flex-shrink: 0;
   white-space: nowrap;
+}
+
+/* Readability: keep supporting text at 14px and reading text at 16px.
+   Rem units honor the reader's browser font-size preference. */
+.hero-description,
+.panel-bottom p,
+.bento > p,
+.project-body > p,
+.about-copy > p,
+.bio-panel > p:not(.large-copy),
+.principles p,
+.experience-row p,
+.education-grid p,
+.architecture-notes p,
+.contact-tile p,
+.project-dialog p,
+.step-narration #flow-status,
+.learning-takeaway p,
+.tailwind-role p {
+  font-size: 1rem;
+  line-height: 1.8;
+}
+.contact-form input,
+.contact-form textarea,
+.palette-header input,
+.terminal input {
+  font-size: 1rem;
+}
+.contact-form label {
+  font-size: 1rem;
+}
+body {
+  font-size: 1rem;
+}
+.file-nav a {
+  line-height: 1.6;
+  padding-block: 12px;
+}
+.folder-name {
+  line-height: 1.6;
+}
+.file-icon {
+  width: 28px;
+}
+.stack-list {
+  gap: 12px;
+}
+.stack-list > a {
+  min-height: 32px;
+}
+.sidebar-bottom > span,
+.sidebar-bottom > a {
+  line-height: 1.7;
+}
+.local-time {
+  flex-wrap: wrap;
+}
+.panel-top {
+  gap: 12px;
+  align-items: flex-start;
+}
+.mini-label,
+.eyebrow {
+  line-height: 1.6;
+  letter-spacing: 0.06em;
+}
+.hero-footnote {
+  flex-wrap: wrap;
+  gap: 10px 20px;
+  line-height: 1.7;
+}
+.hero-footnote > span + span {
+  border: 0;
+  padding-left: 0;
+}
+.hero-copy h1 {
+  overflow-wrap: anywhere;
+}
+.button {
+  min-height: 44px;
+  line-height: 1.5;
+}
+.company-line {
+  flex-wrap: wrap;
+}
+.company-line > span:not(.company-icon) {
+  min-width: 0;
+}
+.company-line small {
+  line-height: 1.6;
+}
+.code-body > div {
+  min-height: 27px;
+  line-height: 1.8;
+}
+.code-body > div > span {
+  min-width: 0;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.code-body > div > b {
+  flex-shrink: 0;
+  min-width: 34px;
+  opacity: 1;
+}
+.code-title,
+.code-footer {
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.code-sticker {
+  padding-right: 45px;
+}
+.code-sticker > span:first-child {
+  letter-spacing: 0.02em;
+}
+.project-category {
+  line-height: 1.6;
+}
+.project-number {
+  position: static;
+  display: block;
+  margin: -10px 0 10px;
+}
+.project-info,
+.project-links {
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.end-note {
+  flex-wrap: wrap;
+  align-items: baseline;
+  line-height: 1.8;
+}
+.end-note > p {
+  flex: 1 1 240px;
+}
+.page-footer {
+  flex-wrap: wrap;
+  line-height: 1.8;
+}
+.active-tab {
+  min-width: 0;
+  flex-shrink: 1;
+}
+#active-file {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.session {
+  flex-shrink: 0;
+  gap: 8px;
+  padding-inline: 16px;
+}
+.session time {
+  min-width: 44px;
+}
+.tab-path {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 0;
+}
+.statusbar {
+  min-height: 38px;
+  height: auto;
+  padding-block: 6px;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+}
+.terminal {
+  bottom: 38px;
+}
+.terminal-heading {
+  min-height: 42px;
+}
+.terminal form {
+  flex-wrap: wrap;
+}
+.terminal input {
+  min-width: 100px;
+}
+.palette-header {
+  flex-wrap: wrap;
+}
+#command-results button {
+  flex-wrap: wrap;
+  align-items: center;
+}
+#command-results button > span:last-child {
+  line-height: 1.6;
+}
+.lab-toolbar {
+  flex-wrap: wrap;
+}
+.lab-mode-switch {
+  flex-wrap: wrap;
+}
+.lab-mode-switch button {
+  min-height: 44px;
+}
+.lab-stage-top {
+  flex-wrap: wrap;
+}
+.lab-simulation {
+  flex-wrap: wrap;
+  line-height: 1.8;
+}
+.endpoint-label {
+  flex-wrap: wrap;
+}
+.mock-brand {
+  flex-wrap: wrap;
+}
+.mock-brand > span {
+  line-height: 1.6;
+}
+.mock-page {
+  min-height: 240px;
+}
+.mock-page p {
+  line-height: 1.8;
+}
+.mock-navigation {
+  flex-wrap: wrap;
+  padding-bottom: 14px;
+}
+.mock-navigation button {
+  min-height: 32px;
+}
+.mock-project-list > div {
+  flex-wrap: wrap;
+}
+.mock-persistent {
+  flex-wrap: wrap;
+  min-height: 46px;
+  line-height: 1.8;
+}
+.server-route > div,
+.database-block > div,
+.server-envelope > div {
+  min-width: 0;
+  flex: 1;
+}
+.server-route code,
+.database-block div > span,
+.server-envelope div > span {
+  overflow-wrap: anywhere;
+  line-height: 1.7;
+}
+.server-task-index {
+  flex-shrink: 0;
+}
+.server-footnote {
+  line-height: 1.8;
+}
+.wire-label {
+  line-height: 1.4;
+  letter-spacing: 0;
+}
+.wire-label strong {
+  overflow-wrap: anywhere;
+  line-height: 1.5;
+}
+.tailwind-role {
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.tailwind-role p {
+  flex: 1 1 200px;
+}
+.tailwind-role-tag {
+  white-space: normal;
+}
+.playback-bar {
+  flex-wrap: wrap;
+}
+.playback-actions {
+  flex-wrap: wrap;
+}
+.playback-icon {
+  width: 44px;
+  height: 44px;
+}
+.playback-speed select {
+  min-height: 44px;
+}
+.step-timeline {
+  overflow-x: auto;
+  grid-template-columns: repeat(7, minmax(110px, 1fr));
+}
+.step-timeline button {
+  min-height: 50px;
+  gap: 7px;
+}
+.step-narration #flow-status {
+  min-height: 155px;
+}
+.inspector-header {
+  flex-wrap: wrap;
+}
+.payload-inspector pre {
+  line-height: 1.8;
+}
+.lab-source {
+  flex-wrap: wrap;
+  line-height: 1.8;
+}
+.lab-source > span {
+  white-space: normal;
+}
+@media (max-width: 1200px) {
+  .tab-path {
+    display: none;
+  }
+  .hero-footnote {
+    flex-direction: column;
+  }
+}
+@media (max-width: 1050px) {
+  .roundtrip-grid {
+    grid-template-columns: 1fr;
+  }
+  .network-bridge {
+    height: 140px;
+    width: 100%;
+  }
+  .network-wires {
+    width: 100px;
+    height: 100px;
+    top: 20px;
+    left: calc(50% - 50px);
+    transform: rotate(90deg);
+  }
+  .wire-label {
+    width: 35%;
+    top: 30px;
+    bottom: auto;
+  }
+  .request-label {
+    left: 0;
+  }
+  .response-label {
+    left: auto;
+    right: 0;
+  }
+  .explanation-grid {
+    grid-template-columns: 1fr;
+  }
+  .step-narration {
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .playback-actions {
+    flex: 1 0 100%;
+  }
+}
+@media (max-width: 760px) {
+  .bento-grid {
+    grid-template-columns: 1fr;
+  }
+  .interactive-bento {
+    grid-column: auto;
+    display: block;
+  }
+  .interactive-bento .flow-mini {
+    margin-block: 20px;
+  }
+  .statusbar-middle {
+    display: none;
+  }
+  .hero-footnote {
+    font-size: 0.875rem;
+    flex-direction: column;
+  }
+  .hero-actions {
+    flex-wrap: wrap;
+  }
+  .project-media,
+  .expanded .project-media,
+  .project-grid > .project-card:last-child .project-media {
+    height: 260px;
+    padding-top: 22px;
+  }
+  .breadcrumb {
+    flex-wrap: wrap;
+  }
+  .project-filter {
+    gap: 8px;
+  }
+  .project-filter button {
+    min-height: 44px;
+  }
+  .experience-date {
+    flex-wrap: wrap;
+  }
+  .lab-mode-switch {
+    flex-direction: column;
+  }
+  .lab-mode-switch button {
+    text-align: left;
+  }
+  .playback-actions .button {
+    flex-basis: 100%;
+  }
+  .playback-actions {
+    gap: 10px;
+  }
+  .mock-persistent {
+    flex-wrap: wrap;
+  }
+  .wire-label {
+    width: 31%;
+  }
+  .tailwind-role p {
+    flex-basis: 170px;
+  }
+  .step-narration #flow-status {
+    min-height: 0;
+  }
+  .lab-source > span {
+    width: 100%;
+    margin: 8px 0 0;
+  }
+  .code-window {
+    font-size: 0.875rem;
+  }
+  .terminal form label {
+    flex-basis: 100%;
+  }
+  .terminal input {
+    flex-basis: 100%;
+  }
+  .palette-header input {
+    flex-basis: 150px;
+  }
+  #command-results button > span:last-child {
+    flex-basis: 100%;
+    margin-left: 26px;
+  }
+}
+@media (max-width: 480px) {
+  .session-label,
+  .tab-dot,
+  .tab-close {
+    display: none;
+  }
+  .active-tab {
+    padding-inline: 12px;
+    gap: 8px;
+  }
+  .session {
+    padding-inline: 12px;
+  }
+  .code-sticker {
+    right: 5px;
+  }
+  .code-title > span {
+    overflow-wrap: anywhere;
+  }
+  .company-line small {
+    white-space: normal;
+  }
 }
